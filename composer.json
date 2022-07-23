@@ -1,0 +1,32 @@
+{
+    "name": "fefo-p/admin-panel",
+    "description": "Admin Panel for Spatie/Laravel-Permission",
+    "version": "1.0.0",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Fernando Pintabona",
+            "email": "fernando.pintabona@pjn.gov.ar"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "FefoP\\AdminPanel\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "FefoP\\AdminPanel\\AdminPanelServiceProvider"
+            ]
+        }
+    },
+    "require": {
+        "php": "^8.0.2",
+        "laravel/jetstream": "^2.10",
+        "livewire/livewire": "^2.5",
+        "spatie/laravel-permission": "^5.5",
+        "rappasoft/laravel-livewire-tables": "^v2.7.0",
+        "wire-elements/modal": "^1.0.7"
+    }
+}
