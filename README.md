@@ -6,6 +6,7 @@
 </p>
 
 ## About Admin Panel
+
 Admin Panel is a TALL based solution to be able to administer users, roles and permissions. It requires several composer packages:
 
 | Package                            | Version   |
@@ -19,47 +20,55 @@ Admin Panel is a TALL based solution to be able to administer users, roles and p
 These are all required dependencies that will be installed if needed.
 
 ## Installation
+
 To get started, add a local repository to Composer:
-```php
-[...]
-"repositories": {
-        "admin-panel": {
-            "type": "path",
-            "url": "/path-to-downloaded-file/fefo-p/admin-panel",
-            "options": {
-                "symlink": true
-            }
-        }
-    },
-[...]
+
+```json
+{
+  [...]
+  "repositories": {
+    "admin-panel": {
+      "type": "path",
+      "url": "/path-to-downloaded-file/fefo-p/admin-panel",
+      "options": {
+        "symlink": true
+      }
+    }
+  },
+  [...]
+}
 ```
 
 Then, require the package via Composer:
+
 ```
 composer require fefo-p/admin-panel
 ```
+
 > **Warning**
-> 
+>
 > You might want to publish the config and migrations before running the install command as will automatically migrate the DB.
-> 
-> To find out the available options to publish, just issue a 
+>
+> To find out the available options to publish, just issue a
 > ```php
 > php artisan vendor:publish
 > ```
 > and check for every entry with *adminpanel*
-> 
+>
 >If in doubt, [check laravel's artisan cli documentation](https://laravel.com/docs/9.x/artisan#options)
-> 
+>
 > Seriously, you've been warned...
 
 ## Initial setup
 
 Execute the following command to do the initial setup.
+
 ```php
 php artisan adminpanel:install
 ```
 
 It will create one role `administrador` with three permissions:
+
 - administrar usuarios
 - administrar roles
 - administrar permisos
@@ -76,7 +85,7 @@ Makes the User model implement MustVerifyEmail, as well as allow email verificat
 Creates a default admin user<br>
 
 > **Note**
-> 
+>
 > **TODO:**
 > *ask for user details while installing*
 
@@ -85,15 +94,19 @@ Creates a default admin user<br>
 ```
 
 ## Assets
+
 You can publish all assets issuing the command, or just select individually the assets you want to publish
+
 ```php
 php artisan vendor:publish --tag=adminpanel
 ```
 
 ## Configuration
+
 You can customize the Modal via the `adminpanel.php` config file. This includes some additional options like ...
 
 To publish the config run the vendor:publish command:
+
 ```shell
 php artisan vendor:publish --tag=adminpanel-config
 ```
@@ -156,7 +169,9 @@ return [
 ```
 
 ## Credits
+
 - [Fernando M. Pintabona](https://github.com/fefo-p)
 
 ## License
 Admin Panel is open-sourced software licensed under the [MIT license](LICENSE.md).
+
