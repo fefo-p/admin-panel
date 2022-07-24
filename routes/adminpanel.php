@@ -21,7 +21,7 @@
 
             Route::controller( AdminPanel::class )->group( function() {
                 Route::get( '/', 'index' )->name( 'adminpanel.dashboard' );
-                Route::get( '/key', 'key' )->name( 'adminpanel.key' );
+                Route::get( '/about', 'about' )->name( 'adminpanel.about' );
                 Route::get( '/users', 'users' )->name( 'adminpanel.users' )->can( 'administrar usuarios' );
                 Route::get( '/roles', 'roles' )->name( 'adminpanel.roles' )->can( 'administrar roles' );
                 Route::get( '/permissions', 'permissions' )->name( 'adminpanel.permissions' )->can( 'administrar permisos' );

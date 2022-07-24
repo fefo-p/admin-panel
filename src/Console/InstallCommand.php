@@ -117,7 +117,10 @@ class InstallCommand extends Command
         $this->info('Publishing needed migrations.');
         $this->callSilent('vendor:publish', ['--provider' => 'Spatie\Permission\PermissionServiceProvider', '--force' => true]);
         $this->callSilent('vendor:publish', ['--tag' => 'adminpanel-migrations', '--force' => true]);
-        $this->callSilent('migrate');
+        
+        $this->line('');
+        $this->call('migrate');
+        $this->line('');
 
         // Publish needed views for tables & modals...
         $this->info('Publishing needed views for tables and modals.');
