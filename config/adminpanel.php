@@ -4,7 +4,10 @@
         /**
          * Component version
          */
-        'version'             => '1.0.0',
+        'version'             => '1.0.1',
+        'version_comments' => [
+          'Primer versión completamente funcional',
+        ],
 
         /**
          * Admin Panel's Service Provider alias
