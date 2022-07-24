@@ -26,6 +26,8 @@
 
         public function mount( int $role_id )
         {
+            auth()->user()->can('editar roles');
+    
             $this->role       = Role::find( $role_id );
             $this->name       = $this->role->name;
             $this->guard_name = $this->role->guard_name;

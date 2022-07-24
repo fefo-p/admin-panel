@@ -13,6 +13,10 @@
         public $password;
         public $password_confirmation;
 
+        public function mount() {
+            auth()->user()->can('crear usuarios');
+        }
+        
         public function crear()
         {
             $user = ( new CreateNewUser() )->create( [

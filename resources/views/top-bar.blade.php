@@ -35,7 +35,7 @@
             </button>
 
             <!-- Profile dropdown -->
-            <div x-data="Components.menu({open: false })" x-init="init()" @keydown.escape.stop="open = false; focusButton()" @click.away="onClickAway($event)"
+            <div x-data="Components.menu({open: false })" x-init="init()" @keydown.escape.stop="open = false; focusButton()" @click.away="open = false"
                  class="ml-3 relative">
                 <div>
                     @if (Laravel\Jetstream\Jetstream::managesProfilePhotos())

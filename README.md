@@ -69,9 +69,9 @@ php artisan adminpanel:install
 
 It will create one role `administrador` with three permissions:
 
-- administrar usuarios
-- administrar roles
-- administrar permisos
+- crear, ver, editar y borrar usuarios
+- crear, ver, editar y borrar roles
+- crear, ver, editar y borrar permisos
 
 There are a few options available with the installation command, but not required
 

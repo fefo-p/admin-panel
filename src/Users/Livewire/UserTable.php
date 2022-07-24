@@ -1,19 +1,23 @@
 <?php
-
+    
     namespace FefoP\AdminPanel\Users\Livewire;
-
+    
     use App\Models\User;
     use FefoP\AdminPanel\Models\Role;
     use Illuminate\Database\Eloquent\Builder;
     use Rappasoft\LaravelLivewireTables\Views\Column;
+    use Illuminate\Auth\Access\AuthorizationException;
     use Rappasoft\LaravelLivewireTables\DataTableComponent;
+    use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
     use Rappasoft\LaravelLivewireTables\Views\Filters\SelectFilter;
     use Rappasoft\LaravelLivewireTables\Views\Columns\BooleanColumn;
     use Rappasoft\LaravelLivewireTables\Views\Filters\DateTimeFilter;
     use Rappasoft\LaravelLivewireTables\Views\Filters\MultiSelectFilter;
-
+    
     class UserTable extends DataTableComponent
     {
+        use AuthorizesRequests;
+        
         public string $tableName    = 'users';
         public array  $users        = [];
         public        $columnSearch = [
@@ -22,16 +26,20 @@
         ];
         protected     $model        = User::class;
         protected     $debug        = false;
-
-        protected $listeners = ['refreshComponent' => '$refresh'];
-
+        protected     $listeners    = [ 'refreshComponent' => '$refresh' ];
+        
         public function mount()
         {
+            // $this->authorize('viewAny', User::class);
+            if ( auth()->user()?->cannot( 'ver usuarios', 'App\Models\User' ) ) {
+                throw new AuthorizationException( 'No tiene permiso para ver listado de usuarios' );
+            }
+            
             if ( request()->get( 'debug' ) ) {
                 $this->debug = request()->get( 'debug' );
             }
         }
-
+        
         public function configure(): void
         {
             $this->setDebugStatus( $this->debug ?? config( 'app.debug' ) )
@@ -40,12 +48,12 @@
                  ->setFilterLayoutSlideDown()
                  ->setEagerLoadAllRelationsStatus( true );
         }
-
+        
         public function builder(): Builder
         {
             return User::query()->withTrashed(); // Select some things
         }
-
+        
         public function columns(): array
         {
             return [
@@ -66,7 +74,7 @@
                       ->view( 'adminpanel::livewire-tables.cells.user-actions' )->html(),
             ];
         }
-
+        
         public function filters(): array
         {
             return [

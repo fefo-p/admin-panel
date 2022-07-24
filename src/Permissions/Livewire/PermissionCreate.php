@@ -4,14 +4,19 @@
 
     use LivewireUI\Modal\ModalComponent;
     use FefoP\AdminPanel\Models\Permission;
-
+    use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
+    
     class PermissionCreate extends ModalComponent
     {
+        use AuthorizesRequests;
+        
         public        $name;
         public string $guard_name;
 
         public function mount()
         {
+            $this->authorize('create', Permission::class);
+    
             $this->guard_name = config( 'adminpanel.guard' );
         }
 
