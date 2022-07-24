@@ -14,6 +14,8 @@
 
         public function mount( int $user_id, string $action )
         {
+            auth()->user()->can('borrar usuarios');
+            
             $this->user   = User::withTrashed()->find( $user_id );
             $this->action = $action;
         }

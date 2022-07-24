@@ -12,6 +12,8 @@
 
         public function mount()
         {
+            auth()->user()->can('crear roles');
+    
             $this->guard_name = config( 'adminpanel.guard' );
         }
 

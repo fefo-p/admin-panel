@@ -4,9 +4,12 @@
 
     use LivewireUI\Modal\ModalComponent;
     use FefoP\AdminPanel\Models\Permission;
-
+    use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
+    
     class PermissionDelete extends ModalComponent
     {
+        use AuthorizesRequests;
+        
         public     $permission;
         public int $permission_id;
         public     $mensaje_error;
@@ -14,6 +17,7 @@
         public function mount( int $permission_id, string $action )
         {
             $this->permission = Permission::find( $permission_id );
+            $this->authorize('delete', $this->permission);
         }
 
         public function confirmar()

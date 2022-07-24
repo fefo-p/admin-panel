@@ -35,7 +35,7 @@
             </button>
 
             <!-- Profile dropdown -->
-            <div x-data="Components.menu({open: false })" x-init="init()" @keydown.escape.stop="open = false; focusButton()" @click.away="onClickAway($event)"
+            <div x-data="Components.menu({open: false })" x-init="init()" @keydown.escape.stop="open = false; focusButton()" @click.away="open = false"
                  class="ml-3 relative">
                 <div>
                     @if (Laravel\Jetstream\Jetstream::managesProfilePhotos())
@@ -44,7 +44,7 @@
                             @keydown.enter.prevent="onButtonEnter()" aria-expanded="false" aria-haspopup="true" x-bind:aria-expanded="open.toString()"
                             @keydown.arrow-up.prevent="onArrowUp()" @keydown.arrow-down.prevent="onArrowDown()"
                             class="flex text-sm transition duration-150 ease-in-out border-2 border-transparent rounded-full focus:outline-none focus:border-gray-300">
-                            <img class="object-cover w-8 h-8 rounded-full"
+                            <img class="object-cover w-8 h-8 rounded-full dark:bg-gray-50"
                                  src="{{ Auth::user()->profile_photo_url }}"
                                  alt="{{ Auth::user()->name }}" />
                         </button>

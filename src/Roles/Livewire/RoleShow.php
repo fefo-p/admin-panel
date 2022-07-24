@@ -12,6 +12,8 @@
 
         public function mount( int $role_id )
         {
+            auth()->user()->can('ver roles');
+    
             $this->role       = Role::find( $role_id );
         }
 

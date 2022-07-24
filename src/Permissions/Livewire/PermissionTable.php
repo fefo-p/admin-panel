@@ -6,9 +6,12 @@
     use FefoP\AdminPanel\Models\Permission;
     use Rappasoft\LaravelLivewireTables\Views\Column;
     use Rappasoft\LaravelLivewireTables\DataTableComponent;
-
+    use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
+    
     class PermissionTable extends DataTableComponent
     {
+        use AuthorizesRequests;
+        
         public string $tableName    = 'permissions';
         public array  $permissions  = [];
         public        $columnSearch = [
@@ -21,6 +24,8 @@
 
         public function mount()
         {
+            $this->authorize('viewAny', Permission::class);
+
             if ( request()->get( 'debug' ) ) {
                 $this->debug = request()->get( 'debug' );
             }

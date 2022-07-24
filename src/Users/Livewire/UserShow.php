@@ -12,6 +12,8 @@
 
         public function mount( int $user_id )
         {
+            auth()->user()->can('ver usuarios');
+    
             $this->user = User::withTrashed()->find( $user_id );
         }
 

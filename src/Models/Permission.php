@@ -8,4 +8,9 @@
     class Permission extends SpatiePermission
     {
         use WithPagination;
+    
+        public function syncUsers($users): array
+        {
+            return $this->users()->sync($users);
+        }
     }

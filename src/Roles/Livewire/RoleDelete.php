@@ -13,6 +13,8 @@
 
         public function mount( int $role_id, string $action )
         {
+            auth()->user()->can('borrar roles');
+    
             $this->role = Role::find( $role_id );
         }
 

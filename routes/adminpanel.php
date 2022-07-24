@@ -4,7 +4,11 @@
     use Illuminate\Support\Facades\Route;
     use FefoP\AdminPanel\Middlewares\IsAdmin;
     use FefoP\AdminPanel\Controllers\UserController;
-
+    use App\Models\User;
+    use FefoP\AdminPanel\Models\Role;
+    use FefoP\AdminPanel\Models\Permission;
+    
+    
     /*
     |--------------------------------------------------------------------------
     | Admin Panel Routes
@@ -21,15 +25,15 @@
 
             Route::controller( AdminPanel::class )->group( function() {
                 Route::get( '/', 'index' )->name( 'adminpanel.dashboard' );
-                Route::get( '/key', 'key' )->name( 'adminpanel.key' );
-                Route::get( '/users', 'users' )->name( 'adminpanel.users' )->can( 'administrar usuarios' );
-                Route::get( '/roles', 'roles' )->name( 'adminpanel.roles' )->can( 'administrar roles' );
-                Route::get( '/permissions', 'permissions' )->name( 'adminpanel.permissions' )->can( 'administrar permisos' );
+                Route::get( '/about', 'about' )->name( 'adminpanel.about' );
+                Route::get( '/users', 'users' )->name( 'adminpanel.users' );
+                Route::get( '/roles', 'roles' )->name( 'adminpanel.roles' )->can( 'administer', Role::class );
+                Route::get( '/permissions', 'permissions' )->name( 'adminpanel.permissions' )->can( 'administer', Permission::class );
             } );
 
-            Route::controller( UserController::class )->group( function() {
-                Route::get( '/users/{user}', 'show' )->name( 'adminpanel.users.show' )->can( 'administrar usuarios' );
-            } );
+            /*Route::controller( UserController::class )->group( function() {
+                Route::get( '/users/{user}', 'show' )->name( 'adminpanel.users.show' )->can( 'ver usuarios' );
+            } );*/
 
         } );
     } );

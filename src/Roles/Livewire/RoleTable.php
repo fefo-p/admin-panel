@@ -5,9 +5,12 @@
     use FefoP\AdminPanel\Models\Role;
     use Rappasoft\LaravelLivewireTables\Views\Column;
     use Rappasoft\LaravelLivewireTables\DataTableComponent;
-
+    use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
+    
     class RoleTable extends DataTableComponent
     {
+        use AuthorizesRequests;
+        
         public string $tableName    = 'roles';
         public array  $roles        = [];
         public        $columnSearch = [
@@ -20,6 +23,8 @@
 
         public function mount()
         {
+            $this->authorize('viewAny', Role::class);
+    
             if ( request()->get( 'debug' ) ) {
                 $this->debug = request()->get( 'debug' );
             }

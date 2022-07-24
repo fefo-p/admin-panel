@@ -15,6 +15,8 @@
 
         public function mount( int $user_id )
         {
+            auth()->user()->can('editar usuarios');
+    
             $this->user  = User::withTrashed()->find( $user_id );
             $this->name  = $this->user->name;
             $this->email = $this->user->email;
