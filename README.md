@@ -77,7 +77,7 @@ Makes the User model implement MustVerifyEmail, as well as allow email verificat
 `--with-user`
 Creates a default admin user<br>
 
-> **Note:**
+> **Note**
 > 
 > **TODO:**
 > *ask for user details while installing*
