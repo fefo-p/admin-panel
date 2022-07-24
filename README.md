@@ -77,7 +77,7 @@ Makes the User model implement MustVerifyEmail, as well as allow email verificat
 `--with-user`
 Creates a default admin user<br>
 
->**TODO:** *ask for user details while installing*
+>**Note:** *ask for user details while installing*
 
 ```shell
  php artisan adminpanel:install [--with-user] [--profile-image] [--verification]
