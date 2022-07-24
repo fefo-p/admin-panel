@@ -1,7 +1,6 @@
 {
     "name": "fefo-p/admin-panel",
     "description": "Admin Panel for Spatie/Laravel-Permission",
-    "version": "1.0.0",
     "license": "MIT",
     "authors": [
         {
@@ -28,5 +27,8 @@
         "spatie/laravel-permission": "^5.5",
         "rappasoft/laravel-livewire-tables": "^v2.7.0",
         "wire-elements/modal": "^1.0.7"
+    },
+    "require-dev": {
+        "barryvdh/laravel-debugbar": "^3.7"
     }
 }
