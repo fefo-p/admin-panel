@@ -1,11 +1,9 @@
-<!--<p align="center">
-<a href="https://github.com/wire-elements/modal/actions"><img src="https://github.com/wire-elements/modal/workflows/PHPUnit/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/wire-elements/modal"><img src="https://img.shields.io/packagist/dt/wire-elements/modal" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/livewire-ui/modal"><img src="https://img.shields.io/packagist/dt/livewire-ui/modal" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/wire-elements/modal"><img src="https://img.shields.io/packagist/v/wire-elements/modal" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/wire-elements/modal"><img src="https://img.shields.io/packagist/l/wire-elements/modal" alt="License"></a>
+<p align="center">
+<a href="https://github.com/fefo-p/adminpanel/actions"><img src="https://github.com/fefo-p/adminpanel/workflows/PHPUnit/badge.svg" alt="Build Status"></a>
+<a href="https://packagist.org/packages/fefo-p/adminpanel"><img src="https://img.shields.io/packagist/dt/fefo-p/adminpanel" alt="Total Downloads"></a>
+<a href="https://packagist.org/packages/fefo-p/adminpanel"><img src="https://img.shields.io/packagist/v/fefo-p/adminpanel" alt="Latest Stable Version"></a>
+<a href="https://packagist.org/packages/fefo-p/adminpanel"><img src="https://img.shields.io/packagist/l/fefo-p/adminpanel" alt="License"></a>
 </p>
--->
 
 ## About Admin Panel
 Admin Panel is a TALL based solution to be able to administer users, roles and permissions. It requires several composer packages:
