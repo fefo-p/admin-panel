@@ -26,27 +26,32 @@
         }
         
         /**
-         * Configure the Blade components.
+         * Configure the routes offered by the application.
          *
          * @return void
          */
-        protected function configureComponents(): void
+        protected function configureRoutes(): void
         {
-            $this->callAfterResolving( BladeCompiler::class, function() {
-                foreach ( config( 'adminpanel.blade-components' ) as $component ) {
-                    $this->registerComponent( $component );
-                }
-            } );
+            $this->loadRoutesFrom( __DIR__ . '/../routes/adminpanel.php' );
         }
         
         /**
-         * Register the layout view template.
+         * Configure the commands offered by the application.
          *
          * @return void
          */
-        protected function registerLayoutView(): void
+        protected function configureCommands(): void
         {
-            Blade::component( config( 'adminpanel.alias' ) . '::layouts.adminpanel', 'ap-adminpanel-layout' );
+            if ( ! $this->app->runningInConsole() ) {
+                return;
+            }
+            
+            AboutCommand::add( 'Admin Panel', [
+                'Version' => fn() => config( 'adminpanel.version' ),
+                'Driver'  => fn() => config( 'adminpanel.driver' ),
+            ] );
+            
+            $this->commands( [ Console\InstallCommand::class ] );
         }
         
         /**
@@ -77,6 +82,10 @@
                               ], [ 'adminpanel', 'adminpanel-views' ] );
             
             $this->publishes( [
+                                  __DIR__ . '/../public' => base_path( 'public' ),
+                              ], [ 'adminpanel', 'adminpanel-public' ] );
+            
+            $this->publishes( [
                                   __DIR__ . '/../resources/views/livewire-ui-modal/modal.blade.php' => resource_path( 'views/vendor/livewire-ui-modal/modal.blade.php' ),
                               ], [ 'adminpanel', 'adminpanel-modal-views' ] );
             
@@ -94,13 +103,27 @@
         }
         
         /**
-         * Configure the routes offered by the application.
+         * Register the layout view template.
          *
          * @return void
          */
-        protected function configureRoutes(): void
+        protected function registerLayoutView(): void
         {
-            $this->loadRoutesFrom( __DIR__ . '/../routes/adminpanel.php' );
+            Blade::component( config( 'adminpanel.alias' ) . '::layouts.adminpanel', 'ap-adminpanel-layout' );
+        }
+        
+        /**
+         * Configure the Blade components.
+         *
+         * @return void
+         */
+        protected function configureComponents(): void
+        {
+            $this->callAfterResolving( BladeCompiler::class, function() {
+                foreach ( config( 'adminpanel.blade-components' ) as $component ) {
+                    $this->registerComponent( $component );
+                }
+            } );
         }
         
         protected function registerLivewireComponents(): void
@@ -108,37 +131,6 @@
             foreach ( config( 'adminpanel.livewire-components' ) as $name => $component_class ) {
                 Livewire::component( config( 'adminpanel.alias' ) . "::$name", $component_class );
             }
-        }
-        
-        /**
-         * Configure the commands offered by the application.
-         *
-         * @return void
-         */
-        protected function configureCommands(): void
-        {
-            if ( ! $this->app->runningInConsole() ) {
-                return;
-            }
-            
-            AboutCommand::add( 'Admin Panel', [
-                'Version' => fn() => config( 'adminpanel.version' ),
-                'Driver'  => fn() => config( 'adminpanel.driver' ),
-            ] );
-            
-            $this->commands( [ Console\InstallCommand::class ] );
-        }
-        
-        /**
-         * Register the given component.
-         *
-         * @param  string  $component
-         *
-         * @return void
-         */
-        protected function registerComponent( string $component ): void
-        {
-            Blade::component( config( 'adminpanel.alias' ) . '::components.' . $component, 'ap-' . $component );
         }
         
         /**
@@ -158,6 +150,18 @@
                              } )
                              ->push( $this->app->databasePath() . "/migrations/{$timestamp}_{$migrationFileName}" )
                              ->first();
+        }
+        
+        /**
+         * Register the given component.
+         *
+         * @param  string  $component
+         *
+         * @return void
+         */
+        protected function registerComponent( string $component ): void
+        {
+            Blade::component( config( 'adminpanel.alias' ) . '::components.' . $component, 'ap-' . $component );
         }
         
         public function register(): void

@@ -92,11 +92,15 @@
             $this->line( '' );
             $this->call( 'migrate' );
             $this->line( '' );
-            
+    
             // Publish needed views for tables & modals...
             $this->info( 'Publishing needed views for tables and modals.' );
             $this->callSilent( 'vendor:publish', [ '--tag' => 'adminpanel-tables', '--force' => true ] );
             $this->callSilent( 'vendor:publish', [ '--tag' => 'adminpanel-modal-views', '--force' => true ] );
+    
+            // Publish needed assets...
+            $this->info( 'Publishing needed assets.' );
+            $this->callSilent( 'vendor:publish', [ '--tag' => 'adminpanel-public', '--force' => true ] );
             
             // Admin user creation is optional
             if ( $this->option( 'with-admin' ) ) {
