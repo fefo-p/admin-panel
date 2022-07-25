@@ -19,7 +19,8 @@
         use AuthorizesRequests;
         
         public string $tableName    = 'users';
-        public array  $users        = [];
+        public ?string $pageName    = 'page';
+        public        $users;
         public        $columnSearch = [
             'name'  => null,
             'email' => null,
@@ -35,15 +36,23 @@
                 throw new AuthorizationException( 'No tiene permiso para ver listado de usuarios' );
             }
             
-            if ( request()->get( 'debug' ) ) {
+            /*if ( request()->get( 'debug' ) ) {
                 $this->debug = request()->get( 'debug' );
             }
+
+            if (request()->get('usersPage')) {
+                dump('ok');
+                $this->gotoPage( request()->get('usersPage'), 'usersPage');
+            }*/
         }
         
         public function configure(): void
         {
             $this->setDebugStatus( $this->debug ?? config( 'app.debug' ) )
                  ->setPrimaryKey( 'id' )
+                 ->setPaginationEnabled()
+                 ->setPaginationVisibilityEnabled()
+                 ->setPerPageAccepted( [ 10, 25, 50, 100 ] )
                  ->setSingleSortingDisabled()
                  ->setFilterLayoutSlideDown()
                  ->setEagerLoadAllRelationsStatus( true );
@@ -117,5 +126,10 @@
                                   $builder->where( 'email_verified_at', '<=', $value );
                               } ),
             ];
+        }
+        
+        public function updatedPage()
+        {
+            return redirect('/adminpanel/users?page='.$this->page);
         }
     }
