@@ -18,7 +18,9 @@
         @livewireStyles
 
         <!-- Scripts -->
-        @vite(['resources/css/app.css', 'resources/js/app.js'])
+        <link rel="stylesheet" href="/css/adminpanel_app.css">
+        <script src="/js/adminpanel_app.js" defer></script>
+        {{--@vite(['resources/css/app.css', 'resources/js/app.js'])--}}
 
         <style>
             [x-cloak] {
