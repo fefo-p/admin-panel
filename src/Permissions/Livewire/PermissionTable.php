@@ -1,7 +1,7 @@
 <?php
-
+    
     namespace FefoP\AdminPanel\Permissions\Livewire;
-
+    
     use FefoP\AdminPanel\Models\Role;
     use FefoP\AdminPanel\Models\Permission;
     use Rappasoft\LaravelLivewireTables\Views\Column;
@@ -13,6 +13,7 @@
         use AuthorizesRequests;
         
         public string $tableName    = 'permissions';
+        public ?string $pageName    = 'page';
         public array  $permissions  = [];
         public        $columnSearch = [
             'name'       => null,
@@ -21,16 +22,16 @@
         protected     $model        = Permission::class;
         protected     $debug        = false;
         protected     $listeners    = [ 'refreshComponent' => '$refresh' ];
-
+        
         public function mount()
         {
             $this->authorize('viewAny', Permission::class);
-
+            
             if ( request()->get( 'debug' ) ) {
                 $this->debug = request()->get( 'debug' );
             }
         }
-
+        
         public function configure(): void
         {
             $this->setDebugStatus( $this->debug ?? config( 'app.debug' ) )
@@ -39,7 +40,7 @@
                  ->setFilterLayoutSlideDown()
                  ->setEagerLoadAllRelationsStatus( true );
         }
-
+        
         public function columns(): array
         {
             return [
@@ -51,5 +52,10 @@
                       ->collapseOnTablet()
                       ->view( 'adminpanel::livewire-tables.cells.permission-actions' ),
             ];
+        }
+        
+        public function updatedPage()
+        {
+            return redirect('/adminpanel/permissions?page='.$this->page);
         }
     }
