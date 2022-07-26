@@ -1,8 +1,8 @@
 <p align="center">
-<a href="https://github.com/fefo-p/adminpanel/actions"><img src="https://github.com/fefo-p/adminpanel/workflows/PHPUnit/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/fefo-p/adminpanel"><img src="https://img.shields.io/packagist/dt/fefo-p/adminpanel" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/fefo-p/adminpanel"><img src="https://img.shields.io/packagist/v/fefo-p/adminpanel" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/fefo-p/adminpanel"><img src="https://img.shields.io/packagist/l/fefo-p/adminpanel" alt="License"></a>
+<a href="https://github.com/fefo-p/admin-panel/actions"><img src="https://github.com/fefo-p/admin-panel/workflows/Laravel/badge.svg" alt="Build Status"></a>
+<a href="https://packagist.org/packages/fefo-p/admin-panel"><img src="https://img.shields.io/packagist/dt/fefo-p/admin-panel" alt="Total Downloads"></a>
+<a href="https://packagist.org/packages/fefo-p/admin-panel"><img src="https://img.shields.io/packagist/v/fefo-p/admin-panel" alt="Latest Stable Version"></a>
+<a href="https://packagist.org/packages/fefo-p/admin-panel"><img src="https://img.shields.io/packagist/l/fefo-p/admin-panel" alt="License"></a>
 </p>
 
 ## About Admin Panel
