@@ -21,6 +21,7 @@ These are all required dependencies that will be installed if needed.
 
 ## Installation
 
+### *-only for development-*
 To get started, add a local repository to Composer:
 
 ```json
@@ -38,7 +39,7 @@ To get started, add a local repository to Composer:
   [...]
 }
 ```
-
+### -production-
 Then, require the package via Composer:
 
 ```
