@@ -22,24 +22,29 @@ These are all required dependencies that will be installed if needed.
 ## Installation
 
 ### *-only for development-*
+
 To get started, add a local repository to Composer:
 
 ```json
 {
-  [...]
-  "repositories": {
-    "admin-panel": {
-      "type": "path",
-      "url": "/path-to-downloaded-file/fefo-p/admin-panel",
-      "options": {
-        "symlink": true
-      }
-    }
-  },
-  [...]
+[
+  ...
+]
+"repositories": {
+"admin-panel": {
+"type": "path",
+"url": "/path-to-downloaded-file/fefo-p/admin-panel",
+"options": {
+"symlink": true
+}
+}
+},
+[...]
 }
 ```
+
 ### -production-
+
 Then, require the package via Composer:
 
 ```
@@ -169,10 +174,109 @@ return [
 ];
 ```
 
+## Setup Vite using SSL
+
+```php
+import { defineConfig } from 'vite';
+import laravel, { refreshPaths } from 'laravel-vite-plugin';
+
+// add these 2 lines
+const domain = "broadcast.test";
+const homedir = require("os").homedir();
+// end add
+
+export default defineConfig({
+    plugins: [
+        laravel({
+            input: [
+                'resources/css/app.css',
+                'resources/js/app.js',
+            ],
+            refresh: [
+                ...refreshPaths,
+                'app/Http/Livewire/**',
+            ],
+        }),
+    ],
+    // add this block
+    server: {
+        https: {
+            key: homedir + "/.config/valet/Certificates/" + domain + ".key",
+            cert: homedir + "/.config/valet/Certificates/" + domain + ".crt",
+        },
+        host: domain,
+        hmr: {
+            host: domain,
+        },
+    },
+    // end add
+});
+
+```
+
+## Laravel Websockets
+
+`confif/broadcasting.php`
+
+```php
+[...]
+    'connections' => [
+
+        'pusher' => [
+            'driver' => 'pusher',
+            'key' => env('PUSHER_APP_KEY'),
+            'secret' => env('PUSHER_APP_SECRET'),
+            'app_id' => env('PUSHER_APP_ID'),
+            'options' => [
+                // 'host' => env('PUSHER_HOST', 'api-'.env('PUSHER_APP_CLUSTER', 'mt1').'.pusher.com') ?: 'api-'.env('PUSHER_APP_CLUSTER', 'mt1').'.pusher.com',
+                'host' => '-----------------your-servers-url-----------------',
+                // 'port' => env('PUSHER_PORT', 443),
+                'port' => env('PUSHER_PORT', 6001),
+                'scheme' => env('PUSHER_SCHEME', 'https'),
+                'encrypted' => true,
+                'useTLS' => env('PUSHER_SCHEME', 'https') === 'https',
+            ],
+            'client_options' => [
+                // Guzzle client options: https://docs.guzzlephp.org/en/stable/request-options.html
+            ],
+        ],
+[...]
+
+```
+
+## Conecting to Echo
+
+`resources/views/layouts/app.blade.php`
+
+```js
+document.onreadystatechange = function () {
+    if (document.readyState === 'complete') {
+        Echo.join('logged_in')
+            .here((users) => {
+                console.log(users);
+            })
+            .joining((user) => {
+                console.log(user.name);
+            })
+            .leaving((user) => {
+                console.log(user.name);
+            })
+            .listen('OrderStatusUpdated', (e) => {
+                console.log(e);
+            })
+            .error((error) => {
+                console.error(error);
+            });
+    }
+};
+
+```
+
 ## Credits
 
 - [Fernando M. Pintabona](https://github.com/fefo-p)
 
 ## License
+
 Admin Panel is open-sourced software licensed under the [MIT license](LICENSE.md).
 
