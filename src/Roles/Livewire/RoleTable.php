@@ -11,20 +11,20 @@
     {
         use AuthorizesRequests;
         
-        public string $tableName    = 'roles';
-        public ?string $pageName    = 'page';
-        public array  $roles        = [];
-        public        $columnSearch = [
+        public string  $tableName    = 'roles';
+        public ?string $pageName     = 'page';
+        public array   $roles        = [];
+        public         $columnSearch = [
             'name'       => null,
             'guard_name' => null,
         ];
-        protected     $model        = Role::class;
-        protected     $debug        = false;
-        protected     $listeners    = [ 'refreshComponent' => '$refresh' ];
+        protected      $model        = Role::class;
+        protected      $debug        = false;
+        protected      $listeners    = [ 'refreshComponent' => '$refresh' ];
         
         public function mount()
         {
-            $this->authorize('viewAny', Role::class);
+            $this->authorize( 'viewAny', Role::class );
             
             if ( request()->get( 'debug' ) ) {
                 $this->debug = request()->get( 'debug' );
@@ -37,6 +37,8 @@
                  ->setPrimaryKey( 'id' )
                  ->setSingleSortingDisabled()
                  ->setFilterLayoutSlideDown()
+                 ->setSearchDisabled()
+                 ->setFiltersDisabled()
                  ->setEagerLoadAllRelationsStatus( true );
         }
         
@@ -55,6 +57,6 @@
         
         public function updatedPage()
         {
-            return redirect('/adminpanel/roles?page='.$this->page);
+            return redirect( '/adminpanel/roles?page=' . $this->page );
         }
     }

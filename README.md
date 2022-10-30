@@ -25,22 +25,19 @@ These are all required dependencies that will be installed if needed.
 
 To get started, add a local repository to Composer:
 
-```json
+```js
 {
-[
-  ...
-]
-"repositories": {
-"admin-panel": {
-"type": "path",
-"url": "/path-to-downloaded-file/fefo-p/admin-panel",
-"options": {
-"symlink": true
-}
-}
-},
-[...]
-}
+  [...]
+    "repositories": {
+        "admin-panel": {
+            "type": "path",
+            "url": "/path-to-downloaded-file/fefo-p/admin-panel",
+            "options": {
+            "symlink": true
+        }
+    },
+    [...]
+  }
 ```
 
 ### -production-
@@ -242,6 +239,22 @@ export default defineConfig({
         ],
 [...]
 
+```
+
+## Websockets with SSL
+
+`.env`
+
+```php
+PUSHER_APP_ID=something_id
+PUSHER_APP_KEY=something_key
+PUSHER_APP_SECRET=something_secret
+PUSHER_HOST=-----------------------domain.com-----------------------
+PUSHER_PORT=6001
+PUSHER_SCHEME=https
+
+LARAVEL_WEBSOCKETS_SSL_LOCAL_CERT='/some-path-to-ssl-certificates/bcast.test.crt'
+LARAVEL_WEBSOCKETS_SSL_LOCAL_PK='/some-path-to-ssl-certificates/bcast.test.key'
 ```
 
 ## Conecting to Echo

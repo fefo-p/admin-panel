@@ -18,16 +18,16 @@
     {
         use AuthorizesRequests;
         
-        public string $tableName    = 'users';
-        public ?string $pageName    = 'page';
-        public        $users;
-        public        $columnSearch = [
+        public string  $tableName    = 'users';
+        public ?string $pageName     = 'page';
+        public         $users;
+        public         $columnSearch = [
             'name'  => null,
             'email' => null,
         ];
-        protected     $model        = User::class;
-        protected     $debug        = false;
-        protected     $listeners    = [ 'refreshComponent' => '$refresh' ];
+        protected      $model        = User::class;
+        protected      $debug        = false;
+        protected      $listeners    = [ 'refreshComponent' => '$refresh' ];
         
         public function mount()
         {
@@ -55,12 +55,14 @@
                  ->setPerPageAccepted( [ 10, 25, 50, 100 ] )
                  ->setSingleSortingDisabled()
                  ->setFilterLayoutSlideDown()
+                 ->setSearchDisabled()
+                 ->setFiltersDisabled()
                  ->setEagerLoadAllRelationsStatus( true );
         }
         
         public function builder(): Builder
         {
-            return User::query()->withTrashed(); // Select some things
+            return User::query()->with('roles')->withTrashed(); // Select some things
         }
         
         public function columns(): array
@@ -97,11 +99,11 @@
                                          ->toArray() )
                                  ->filter( function( Builder $builder, array $values ) {
                                      $builder->whereHas( 'roles', fn( $query ) => $query->whereIn( 'roles.id', $values ) );
-                                 } )
-                                 ->setFilterPillValues( [
+                                 } ),
+                                 /*->setFilterPillValues( [
                                                             '1' => 'Administrador',
                                                             '2' => 'Otro Rol',
-                                                        ] ),
+                                                        ] ),*/
                 SelectFilter::make( 'E-mail Verificado', 'email_verified_at' )
                             ->setFilterPillTitle( 'Verificado' )
                             ->options( [
@@ -130,6 +132,6 @@
         
         public function updatedPage()
         {
-            return redirect('/adminpanel/users?page='.$this->page);
+            return redirect( '/adminpanel/users?page=' . $this->page );
         }
     }

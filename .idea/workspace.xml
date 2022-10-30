@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="02cbde73-5ed5-45b2-822b-e453ce0f9246" name="Changes" comment="updated readme.md">
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/adminpanel.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/adminpanel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/adminpanel.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/adminpanel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Permissions/Livewire/PermissionTable.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Permissions/Livewire/PermissionTable.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Roles/Livewire/RoleTable.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Roles/Livewire/RoleTable.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Users/Livewire/UserTable.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Users/Livewire/UserTable.php" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" doNotAsk="true" notifyAboutMissingVendor="false" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="PUSH_TAGS">
+      <GitPushTagMode>
+        <option name="argument" value="--tags" />
+        <option name="title" value="All" />
+      </GitPushTagMode>
+    </option>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 8.1.5">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/psr/event-dispatcher" />
+      <path value="$PROJECT_DIR$/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/jenssegers/agent" />
+      <path value="$PROJECT_DIR$/vendor/nunomaduro/termwind" />
+      <path value="$PROJECT_DIR$/vendor/mobiledetect/mobiledetectlib" />
+      <path value="$PROJECT_DIR$/vendor/wire-elements/modal" />
+      <path value="$PROJECT_DIR$/vendor/fruitcake/php-cors" />
+      <path value="$PROJECT_DIR$/vendor/jaybizzle/crawler-detect" />
+      <path value="$PROJECT_DIR$/vendor/maximebf/debugbar" />
+      <path value="$PROJECT_DIR$/vendor/pragmarx/google2fa" />
+      <path value="$PROJECT_DIR$/vendor/paragonie/constant_time_encoding" />
+      <path value="$PROJECT_DIR$/vendor/rappasoft/laravel-livewire-tables" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/inflector" />
+      <path value="$PROJECT_DIR$/vendor/livewire/livewire" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/lexer" />
+      <path value="$PROJECT_DIR$/vendor/barryvdh/laravel-debugbar" />
+      <path value="$PROJECT_DIR$/vendor/symfony/http-foundation" />
+      <path value="$PROJECT_DIR$/vendor/symfony/error-handler" />
+      <path value="$PROJECT_DIR$/vendor/symfony/routing" />
+      <path value="$PROJECT_DIR$/vendor/symfony/service-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-grapheme" />
+      <path value="$PROJECT_DIR$/vendor/symfony/process" />
+      <path value="$PROJECT_DIR$/vendor/symfony/console" />
+      <path value="$PROJECT_DIR$/vendor/symfony/event-dispatcher-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/finder" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-idn" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-normalizer" />
+      <path value="$PROJECT_DIR$/vendor/symfony/string" />
+      <path value="$PROJECT_DIR$/vendor/symfony/deprecation-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/http-kernel" />
+      <path value="$PROJECT_DIR$/vendor/symfony/mime" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php81" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php72" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php80" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/vendor/symfony/event-dispatcher" />
+      <path value="$PROJECT_DIR$/vendor/symfony/var-dumper" />
+      <path value="$PROJECT_DIR$/vendor/symfony/translation" />
+      <path value="$PROJECT_DIR$/vendor/symfony/translation-contracts" />
+      <path value="$PROJECT_DIR$/vendor/spatie/laravel-permission" />
+      <path value="$PROJECT_DIR$/vendor/dasprid/enum" />
+      <path value="$PROJECT_DIR$/vendor/ramsey/uuid" />
+      <path value="$PROJECT_DIR$/vendor/spatie/laravel-package-tools" />
+      <path value="$PROJECT_DIR$/vendor/laravel/jetstream" />
+      <path value="$PROJECT_DIR$/vendor/laravel/serializable-closure" />
+      <path value="$PROJECT_DIR$/vendor/egulias/email-validator" />
+      <path value="$PROJECT_DIR$/vendor/laravel/fortify" />
+      <path value="$PROJECT_DIR$/vendor/voku/portable-ascii" />
+      <path value="$PROJECT_DIR$/vendor/bacon/bacon-qr-code" />
+      <path value="$PROJECT_DIR$/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/vendor/psr/simple-cache" />
+      <path value="$PROJECT_DIR$/vendor/nesbot/carbon" />
+      <path value="$PROJECT_DIR$/vendor/ramsey/collection" />
+      <path value="$PROJECT_DIR$/vendor/brick/math" />
+      <path value="$PROJECT_DIR$/vendor/league/mime-type-detection" />
+      <path value="$PROJECT_DIR$/vendor/illuminate/collections" />
+      <path value="$PROJECT_DIR$/vendor/illuminate/validation" />
+      <path value="$PROJECT_DIR$/vendor/illuminate/console" />
+      <path value="$PROJECT_DIR$/vendor/illuminate/session" />
+      <path value="$PROJECT_DIR$/vendor/illuminate/view" />
+      <path value="$PROJECT_DIR$/vendor/illuminate/queue" />
+      <path value="$PROJECT_DIR$/vendor/illuminate/routing" />
+      <path value="$PROJECT_DIR$/vendor/illuminate/events" />
+      <path value="$PROJECT_DIR$/vendor/illuminate/conditionable" />
+      <path value="$PROJECT_DIR$/vendor/illuminate/support" />
+      <path value="$PROJECT_DIR$/vendor/illuminate/http" />
+      <path value="$PROJECT_DIR$/vendor/illuminate/macroable" />
+      <path value="$PROJECT_DIR$/vendor/illuminate/contracts" />
+      <path value="$PROJECT_DIR$/vendor/illuminate/bus" />
+      <path value="$PROJECT_DIR$/vendor/illuminate/filesystem" />
+      <path value="$PROJECT_DIR$/vendor/illuminate/container" />
+      <path value="$PROJECT_DIR$/vendor/illuminate/database" />
+      <path value="$PROJECT_DIR$/vendor/illuminate/pipeline" />
+      <path value="$PROJECT_DIR$/vendor/illuminate/translation" />
+      <path value="$PROJECT_DIR$/vendor/illuminate/auth" />
+    </include_path>
+  </component>
+  <component name="ProjectId" id="2CMiljBHpjKEhlyLrwUA8Fv51LF" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/fefo/Development/Repository/fefo-p/admin-panel/resources/js&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.general&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/js" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/src/Actions" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/package" />
+      <recent name="$PROJECT_DIR$/src" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="02cbde73-5ed5-45b2-822b-e453ce0f9246" name="Changes" comment="" />
+      <created>1658619008137</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1658619008137</updated>
+      <workItem from="1658619009619" duration="346000" />
+      <workItem from="1658619361893" duration="1136000" />
+      <workItem from="1658621154755" duration="4227000" />
+      <workItem from="1658625416722" duration="748000" />
+      <workItem from="1658663881668" duration="20559000" />
+      <workItem from="1658762525491" duration="10470000" />
+      <workItem from="1658776315581" duration="275000" />
+      <workItem from="1658782427319" duration="12000" />
+      <workItem from="1658784715173" duration="302000" />
+      <workItem from="1658836992656" duration="1539000" />
+      <workItem from="1658945342829" duration="622000" />
+      <workItem from="1659033144141" duration="1200000" />
+      <workItem from="1659034715412" duration="1191000" />
+      <workItem from="1667134993293" duration="1115000" />
+    </task>
+    <task id="LOCAL-00001" summary="- added vendor to gitignore&#10;- deleted composer.lock">
+      <created>1658619420967</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1658619420967</updated>
+    </task>
+    <task id="LOCAL-00002" summary="- added vendor to gitignore">
+      <created>1658620264111</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1658620264111</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Added Readme file">
+      <created>1658625313388</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1658625313388</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Typo fix in Readme file">
+      <created>1658625454934</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1658625454934</updated>
+    </task>
+    <task id="LOCAL-00005" summary="One more update to readme file">
+      <created>1658625609968</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1658625609968</updated>
+    </task>
+    <task id="LOCAL-00006" summary="another typo fix in readme file">
+      <created>1658625660930</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1658625660930</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Improved composer.json repository info">
+      <created>1658626155844</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1658626155844</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Added background to default profile image in top bar while in dark-mode">
+      <created>1658664099376</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1658664099376</updated>
+    </task>
+    <task id="LOCAL-00009" summary="- changed &quot;key&quot; menu for &quot;about&quot;&#10;- formatted artisan about command output">
+      <created>1658687346293</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1658687346293</updated>
+    </task>
+    <task id="LOCAL-00010" summary="- added possibility to define admin user while installing&#10;- implementes policies for user, role and permission models">
+      <created>1658697432543</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1658697432543</updated>
+    </task>
+    <task id="LOCAL-00011" summary="- added version comments to config file&#10;- tagged as v1.0.1">
+      <created>1658697626744</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1658697626744</updated>
+    </task>
+    <task id="LOCAL-00012" summary="- removed verion number from composer.json&#10;- added debugbar as a require-dev">
+      <created>1658699022453</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1658699022453</updated>
+    </task>
+    <task id="LOCAL-00013" summary="bumped verion number to v1.0.2">
+      <created>1658699628134</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1658699628134</updated>
+    </task>
+    <task id="LOCAL-00014" summary="cleaned-up service provider">
+      <created>1658764893110</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1658764893110</updated>
+    </task>
+    <task id="LOCAL-00015" summary="moved from vite to mix">
+      <created>1658774964890</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1658774964891</updated>
+    </task>
+    <task id="LOCAL-00016" summary="fix: added assets to commit">
+      <created>1658776448560</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1658776448560</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Fixed (actually workaround ) pagination on laravel-tables">
+      <created>1658784979758</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1658784979758</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Fixed GitHub status icons">
+      <created>1658837147532</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1658837147532</updated>
+    </task>
+    <task id="LOCAL-00019" summary="updated readme.md">
+      <created>1658837318817</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1658837318817</updated>
+    </task>
+    <task id="LOCAL-00020" summary="updated readme.md">
+      <created>1658945956769</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1658945956769</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="devel" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="- added vendor to gitignore&#10;- deleted composer.lock" />
+    <MESSAGE value="- added vendor to gitignore" />
+    <MESSAGE value="Added Readme file" />
+    <MESSAGE value="Typo fix in Readme file" />
+    <MESSAGE value="One more update to readme file" />
+    <MESSAGE value="another typo fix in readme file" />
+    <MESSAGE value="Improved composer.json repository info" />
+    <MESSAGE value="Added background to default profile image in top bar while in dark-mode" />
+    <MESSAGE value="- changed &quot;key&quot; menu for &quot;about&quot;&#10;- formatted artisan about command output" />
+    <MESSAGE value="- added possibility to define admin user while installing&#10;- implementes policies for user, role and permission models" />
+    <MESSAGE value="- added version comments to config file&#10;- tagged as v1.0.1" />
+    <MESSAGE value="- removed verion number from composer.json&#10;- added debugbar as a require-dev" />
+    <MESSAGE value="bumped verion number to v1.0.2" />
+    <MESSAGE value="cleaned-up service provider" />
+    <MESSAGE value="moved from vite to mix" />
+    <MESSAGE value="fix: added assets to commit" />
+    <MESSAGE value="Fixed (actually workaround ) pagination on laravel-tables" />
+    <MESSAGE value="Fixed GitHub status icons" />
+    <MESSAGE value="updated readme.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated readme.md" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
