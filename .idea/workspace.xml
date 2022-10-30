@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="02cbde73-5ed5-45b2-822b-e453ce0f9246" name="Changes" comment="updated readme.md">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/adminpanel.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/adminpanel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/adminpanel.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/adminpanel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Permissions/Livewire/PermissionTable.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Permissions/Livewire/PermissionTable.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Roles/Livewire/RoleTable.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Roles/Livewire/RoleTable.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Users/Livewire/UserTable.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Users/Livewire/UserTable.php" afterDir="false" />
-    </list>
+    <list default="true" id="02cbde73-5ed5-45b2-822b-e453ce0f9246" name="Changes" comment="Fix: tables" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -164,7 +157,7 @@
       <workItem from="1658945342829" duration="622000" />
       <workItem from="1659033144141" duration="1200000" />
       <workItem from="1659034715412" duration="1191000" />
-      <workItem from="1667134993293" duration="1115000" />
+      <workItem from="1667134993293" duration="1261000" />
     </task>
     <task id="LOCAL-00001" summary="- added vendor to gitignore&#10;- deleted composer.lock">
       <created>1658619420967</created>
@@ -306,7 +299,14 @@
       <option name="project" value="LOCAL" />
       <updated>1658945956769</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Fix: tables">
+      <created>1667136156504</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1667136156504</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -355,7 +355,8 @@
     <MESSAGE value="Fixed (actually workaround ) pagination on laravel-tables" />
     <MESSAGE value="Fixed GitHub status icons" />
     <MESSAGE value="updated readme.md" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated readme.md" />
+    <MESSAGE value="Fix: tables" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix: tables" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
