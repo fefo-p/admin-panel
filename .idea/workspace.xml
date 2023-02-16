@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="02cbde73-5ed5-45b2-822b-e453ce0f9246" name="Changes" comment="Fix: tables">
-      <change beforePath="$PROJECT_DIR$/.idea/blade.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/blade.xml" afterDir="false" />
+    <list default="true" id="02cbde73-5ed5-45b2-822b-e453ce0f9246" name="Changes" comment="Included:&#10;- illuminate/container &quot;^9.52&quot;&#10;- illuminate/support &quot;^9.52&quot;">
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/adminpanel.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/adminpanel.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,7 +15,9 @@
   </component>
   <component name="ComposerSettings" doNotAsk="true" notifyAboutMissingVendor="false" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
-    <execution />
+    <execution>
+      <executable path="composer" />
+    </execution>
   </component>
   <component name="Git.Settings">
     <option name="PUSH_TAGS">
@@ -170,7 +170,7 @@
       <workItem from="1659033144141" duration="1200000" />
       <workItem from="1659034715412" duration="1191000" />
       <workItem from="1667134993293" duration="1721000" />
-      <workItem from="1676558849708" duration="329000" />
+      <workItem from="1676558849708" duration="511000" />
     </task>
     <task id="LOCAL-00001" summary="- added vendor to gitignore&#10;- deleted composer.lock">
       <created>1658619420967</created>
@@ -326,7 +326,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667136488970</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Included:&#10;- illuminate/container &quot;^9.52&quot;&#10;- illuminate/support &quot;^9.52&quot;">
+      <created>1676559259330</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1676559259330</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -376,7 +383,8 @@
     <MESSAGE value="Fixed GitHub status icons" />
     <MESSAGE value="updated readme.md" />
     <MESSAGE value="Fix: tables" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix: tables" />
+    <MESSAGE value="Included:&#10;- illuminate/container &quot;^9.52&quot;&#10;- illuminate/support &quot;^9.52&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Included:&#10;- illuminate/container &quot;^9.52&quot;&#10;- illuminate/support &quot;^9.52&quot;" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

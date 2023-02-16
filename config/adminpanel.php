@@ -4,7 +4,7 @@
         /**
          * Component version
          */
-        'version'             => '1.0.7-dev',
+        'version'             => '1.0.8',
         'version_comments' => [
           'Primer versión completamente funcional',
         ],
