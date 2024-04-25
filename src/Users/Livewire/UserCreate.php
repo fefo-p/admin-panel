@@ -14,8 +14,6 @@
         public $nombre;
         public $email;
         public $cuil;
-        public $password;
-        public $password_confirmation;
 
         public function mount(): void
         {
@@ -27,9 +25,9 @@
             $pwd = Uuid::uuid4()->toString();
 
             $this->validate([
-                                'nombre' => ['required'],
-                                'email'  => ['required', 'unique:App\Models\User,email'],
-                                'cuil'   => ['required'],
+                                'nombre' => [ 'required' ],
+                                'email'  => [ 'required', 'unique:App\Models\User,email' ],
+                                'cuil'   => [ 'required' ],
                             ]);
 
             $user = ( new CreateNewUser() )->create([

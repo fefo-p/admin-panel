@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="02cbde73-5ed5-45b2-822b-e453ce0f9246" name="Changes" comment="Agregada opción de indicar si los usuarios son sólo internos o internos/externos">
+    <list default="true" id="02cbde73-5ed5-45b2-822b-e453ce0f9246" name="Changes" comment="Quitar habilidad de asignar/borrar usuarios de un rol/permiso.&#10;Ahora se hace desde el módulo de usuarios">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/adminpanel.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/adminpanel.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/permissions/livewire/permission-edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/permissions/livewire/permission-edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/roles/livewire/role-edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/roles/livewire/role-edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Users/Livewire/UserCreate.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Users/Livewire/UserCreate.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -207,7 +207,7 @@
       <workItem from="1713964338928" duration="130000" />
       <workItem from="1713965157864" duration="773000" />
       <workItem from="1713968089760" duration="11833000" />
-      <workItem from="1714040020182" duration="15580000" />
+      <workItem from="1714040020182" duration="17712000" />
     </task>
     <task id="LOCAL-00001" summary="- added vendor to gitignore&#10;- deleted composer.lock">
       <created>1658619420967</created>
@@ -386,7 +386,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714057447310</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Quitar habilidad de asignar/borrar usuarios de un rol/permiso.&#10;Ahora se hace desde el módulo de usuarios">
+      <option name="closed" value="true" />
+      <created>1714058440735</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1714058440735</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -439,7 +447,8 @@
     <MESSAGE value="Included:&#10;- illuminate/container &quot;^9.52&quot;&#10;- illuminate/support &quot;^9.52&quot;" />
     <MESSAGE value="Fixed user roles &amp; permissions" />
     <MESSAGE value="Agregada opción de indicar si los usuarios son sólo internos o internos/externos" />
-    <option name="LAST_COMMIT_MESSAGE" value="Agregada opción de indicar si los usuarios son sólo internos o internos/externos" />
+    <MESSAGE value="Quitar habilidad de asignar/borrar usuarios de un rol/permiso.&#10;Ahora se hace desde el módulo de usuarios" />
+    <option name="LAST_COMMIT_MESSAGE" value="Quitar habilidad de asignar/borrar usuarios de un rol/permiso.&#10;Ahora se hace desde el módulo de usuarios" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

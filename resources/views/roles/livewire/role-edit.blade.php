@@ -99,11 +99,6 @@
             </dl>
         </div>
 
-        {{--
-        - choices__inner
-        - choices__list
-        --}}
-
         <div class="flex justify-end">
             <x-ap-secondary-button wire:click="cancelar" type="button">
                 Cancelar
