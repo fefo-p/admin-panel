@@ -15,14 +15,15 @@
                                 <label for="name" class="block text-sm font-medium text-gray-700 dark:text-gray-500">Nombre</label>
                                 <input type="text" wire:model="name" name="name" id="name"
                                        class="dark:bg-gray-700 dark:text-gray-400 mt-1 focus:ring-blue-500 dark:border-gray-700 focus:border-blue-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
-                                <x-jet-input-error for="name" />
+                                <x-jet-input-error for="name"/>
                             </div>
 
                             <div class="col-span-6 sm:col-span-3">
-                                <label for="guard_name" class="block text-sm font-medium text-gray-700 dark:text-gray-500">Guard</label>
+                                <label for="guard_name"
+                                       class="block text-sm font-medium text-gray-700 dark:text-gray-500">Guard</label>
                                 <input type="text" wire:model="guard_name" name="guard_name" id="guard_name"
                                        class="dark:bg-gray-700 dark:text-gray-400 mt-1 focus:ring-blue-500 dark:border-gray-700 focus:border-blue-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
-                                <x-jet-input-error for="guard_name" />
+                                <x-jet-input-error for="guard_name"/>
                             </div>
                         </div>
                     </form>
@@ -43,7 +44,8 @@
                                 <div class="flex flex-row items-center space-x-3">
                                     {{-- Trash heroicon icon --}}
                                     <div wire:click="quitar_permiso({{ $key }})" class="text-red-500 shrink-0">
-                                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"
+                                             xmlns="http://www.w3.org/2000/svg">
                                             <path fill-rule="evenodd"
                                                   d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z"
                                                   clip-rule="evenodd"></path>
@@ -57,11 +59,11 @@
                         @endif
                     </dd>
 
-                    <x-ap-separador />
+                    <x-ap-separador/>
+                </div>
 
-                    <dt class="text-sm font-medium text-gray-500 dark:text-gray-400">
-                        Permisos disponibles
-                    </dt>
+                <div class="col-span-1 sm:col-span-4">
+                    <dt class="text-sm font-medium text-gray-500 dark:text-gray-400">Permisos disponibles</dt>
                     <dd class="mt-1 max-w-prose text-sm text-gray-900 dark:text-gray-200 space-y-1">
                         <div wire:ignore
                              x-data="{
@@ -89,69 +91,8 @@
                                         }
                                     }"
                              class="z-50 w-full text-gray-900 dark:bg-gray-800 dark:text-gray-800">
-                            <select class="w-full" wire:model="permiso_a_agregar" name="permiso_a_agregar" id="permiso_a_agregar" x-ref="permisos"></select>
-                        </div>
-
-                    </dd>
-                </div>
-
-                <div class="col-span-1 sm:col-span-4">
-                    <dt class="text-sm font-medium text-gray-500 dark:text-gray-400">
-                        Usuarios
-                    </dt>
-                    <dd class="mt-1 max-w-prose text-sm text-gray-900 dark:text-gray-200 space-y-1">
-                        @if(count($selected_users))
-                            @foreach($selected_users as $key => $name)
-                                <div class="flex flex-row items-center space-x-3">
-                                    {{-- Trash heroicon icon --}}
-                                    <div wire:click="quitar_usuario({{ $key }})" class="text-red-500 shrink-0">
-                                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                            <path fill-rule="evenodd"
-                                                  d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z"
-                                                  clip-rule="evenodd"></path>
-                                        </svg>
-                                    </div>
-                                    <div>{{ $name }}</div>
-                                </div>
-                            @endforeach
-                        @else
-                            <p class="text-red-500">Sin usuarios asignados</p>
-                        @endif
-                    </dd>
-
-                    <x-ap-separador />
-
-                    <dt class="text-sm font-medium text-gray-500 dark:text-gray-400">
-                        Usuarios disponibles
-                    </dt>
-                    <dd class="mt-1 max-w-prose text-sm text-gray-900 dark:text-gray-200 space-y-1">
-                        <div wire:ignore
-                            x-data="{
-                                        multiple: false,
-                                        value: @entangle('usuario_a_agregar'),
-                                        options: @entangle('available_users'),
-                                        init() {
-                                            this.$nextTick(() => {
-                                                let choices = new Choices(this.$refs.usuarios, { allowHTML: true, } );
-
-                                                let refreshChoices = () => {
-                                                    choices.clearChoices();
-                                                    choices.setChoices(this.options);
-                                                }
-
-                                                refreshChoices();
-
-                                                this.$refs.usuarios.addEventListener('change', () => {
-                                                    this.value = choices.getValue(true)
-                                                });
-
-                                                this.$watch('value', () => refreshChoices());
-                                                this.$watch('options', () => refreshChoices());
-                                            })
-                                        }
-                                    }"
-                            class="z-50 w-full text-gray-900 dark:bg-gray-800 dark:text-gray-800">
-                            <select class="w-full" wire:model="usuario_a_agregar" name="usuario_a_agregar" id="usuario_a_agregar" x-ref="usuarios"></select>
+                            <select class="w-full" wire:model="permiso_a_agregar" name="permiso_a_agregar"
+                                    id="permiso_a_agregar" x-ref="permisos"></select>
                         </div>
                     </dd>
                 </div>
@@ -164,7 +105,7 @@
         --}}
 
         <div class="flex justify-end">
-            <x-ap-secondary-button wire:click="cancelar" type="button" >
+            <x-ap-secondary-button wire:click="cancelar" type="button">
                 Cancelar
             </x-ap-secondary-button>
             <x-ap-button wire:click="actualizar" type="submit"
