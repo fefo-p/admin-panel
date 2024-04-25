@@ -63,7 +63,14 @@
         
         public function builder(): Builder
         {
-            return User::query()->with('roles')->withTrashed(); // Select some things
+            $query = User::query()->with('roles')->withTrashed();
+            // Chequear si se tiene una mezcla de usuarios (internos/externos) o sólo internos
+
+            if (config('adminpanel.users.external')) {
+                return $query->where(config('adminpanel.users.is_external_column'), false);
+            }
+
+            return $query;
         }
         
         public function columns(): array

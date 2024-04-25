@@ -7,9 +7,12 @@
     use LivewireUI\Modal\ModalComponent;
     use Illuminate\Support\Facades\Auth;
     use FefoP\AdminPanel\Models\Permission;
+    use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 
     class UserEdit extends ModalComponent
     {
+        use AuthorizesRequests;
+
         public User   $user;
         public string $name;
         public string $email;
@@ -22,9 +25,11 @@
 
         public function mount(int $user_id): void
         {
-            Auth::user()->can('editar usuarios');
+            $this->authorize('administer', App\Models\User::class);
 
-            $this->user  = User::withTrashed()->with([ "roles", "permissions" ])->find($user_id);
+            $this->user  = User::withTrashed()
+                               ->with([ "roles", "permissions" ])
+                               ->find($user_id);
             $this->name  = $this->user->name;
             $this->email = $this->user->email;
             $this->cuil  = $this->user->cuil;
@@ -69,12 +74,12 @@
         protected function validar(): array
         {
             return $this->validate([
-                                       'name'          => [ 'sometimes', 'required', 'string', 'max:255' ],
-                                       'email'         => [
+                                       'name'  => [ 'sometimes', 'required', 'string', 'max:255' ],
+                                       'email' => [
                                            'sometimes', 'required', 'string', 'email', 'max:255',
                                            'unique:users,email,'.$this->user->id,
                                        ],
-                                       'cuil'          => [ 'sometimes', 'required', 'numeric' ],
+                                       'cuil'  => [ 'sometimes', 'required', 'numeric' ],
                                    ]);
         }
 

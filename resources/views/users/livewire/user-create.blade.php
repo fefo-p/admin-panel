@@ -12,10 +12,10 @@
                     <form action="#" method="POST">
                         <div class="grid grid-cols-6 gap-6">
                             <div class="col-span-6 sm:col-span-3">
-                                <label for="name" class="block text-sm font-medium text-gray-700 dark:text-gray-500">Nombre Completo</label>
-                                <input type="text" wire:model="name" name="name" id="name"
+                                <label for="nombre" class="block text-sm font-medium text-gray-700 dark:text-gray-500">Nombre Completo</label>
+                                <input type="text" wire:model="nombre" nombre="nombre" id="nombre"
                                        class="dark:bg-gray-700 dark:text-gray-400 mt-1 focus:ring-blue-500 dark:border-gray-700 focus:border-blue-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
-                                <x-jet-input-error for="name" />
+                                <x-jet-input-error for="nombre" />
                             </div>
 
                             <div class="col-span-6 sm:col-span-3">
@@ -25,19 +25,19 @@
                                 <x-jet-input-error for="email" />
                             </div>
 
-                            <div class="col-span-6 sm:col-span-3">
+                            {{--<div class="col-span-6 sm:col-span-3">
                                 <label for="password" class="block text-sm font-medium text-gray-700 dark:text-gray-500">Contraseña</label>
                                 <input type="password" wire:model="password" name="password" id="password"
                                        class="dark:bg-gray-700 dark:text-gray-400 mt-1 focus:ring-blue-500 dark:border-gray-700 focus:border-blue-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
                                 <x-jet-input-error for="password" />
-                            </div>
+                            </div>--}}
 
-                            <div class="col-span-6 sm:col-span-3">
+                            {{--<div class="col-span-6 sm:col-span-3">
                                 <label for="password_confirmation" class="block text-sm font-medium text-gray-700 dark:text-gray-500">Confirmar Contraseña</label>
                                 <input type="password" wire:model="password_confirmation" name="password_confirmation" id="password_confirmation"
                                        class="dark:bg-gray-700 dark:text-gray-400 mt-1 focus:ring-blue-500 dark:border-gray-700 focus:border-blue-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
                                 <x-jet-input-error for="password_confirmation" />
-                            </div>
+                            </div>--}}
 
                             <div class="col-span-6 sm:col-span-3 lg:col-span-2">
                                 <label for="cuil" class="block text-sm font-medium text-gray-700 dark:text-gray-500">CUIL</label>

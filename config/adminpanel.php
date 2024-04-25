@@ -4,9 +4,14 @@
         /**
          * Component version
          */
-        'version'             => '1.0.8',
+        'version'          => '1.0.8',
         'version_comments' => [
-          'Primer versión completamente funcional',
+            'Primer versión completamente funcional',
+        ],
+
+        'users'               => [
+            'external'           => env('ADMINPANEL_EXTERNAL_USERS', false),
+            'is_external_column' => env('ADMINPANEL_EXTERNAL_COLUMN', 'externo'),
         ],
 
         /**
@@ -17,7 +22,7 @@
         /**
          * Admin Panel's Service Provider alias
          */
-        'guard'               => env( 'ADMIN_PANEL_DEFAULT_GUARD', 'web' ),
+        'guard'               => env('ADMIN_PANEL_DEFAULT_GUARD', 'web'),
 
         /**
          * Livewire components that should be registered
@@ -63,6 +68,6 @@
         /**
          * Dummy values for testing
          */
-        'key'              => env( 'ADMIN_PANEL_KEY', 'some-key' ),
+        'key'              => env('ADMIN_PANEL_KEY', 'some-key'),
         'driver'           => 'Algo por acá',
     ];

@@ -96,6 +96,18 @@ Creates a default admin user<br>
  php artisan adminpanel:install [--with-user] [--profile-image] [--verification]
 ```
 
+## Environment setup
+
+If there's a combination of external & internal users (then you only need to manage the internal user's permissions),
+you should add two environment variables:
+```dotenv
+ADMINPANEL_EXTERNAL_USERS=true
+ADMINPANEL_EXTERNAL_COLUMN='externo'
+```
+where the first one indicates if there are external users, and the second indicates the column, in the users table, which will be responsible for letting us know if the user is external or internal.
+
+
+
 ## Assets
 
 You can publish all assets issuing the command, or just select individually the assets you want to publish
