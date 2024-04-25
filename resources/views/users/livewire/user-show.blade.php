@@ -1,13 +1,14 @@
 <div class="px-4 py-2 w-full flex flex-row items-center space-x-4">
     <div class="hidden sm:block absolute top-0 right-0 pt-4 pr-4">
         <button
-            wire:click="$emit('closeModal')"
-            type="button"
-            class="bg-white dark:bg-gray-700 rounded-md text-gray-400 dark:text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                wire:click="$emit('closeModal')"
+                type="button"
+                class="bg-white dark:bg-gray-700 rounded-md text-gray-400 dark:text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
             <span class="sr-only">Close</span>
             <!-- Heroicon name: outline/x -->
-            <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                 stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
             </svg>
         </button>
     </div>
@@ -19,7 +20,8 @@
                     <div class="flex">
                         @if (Laravel\Jetstream\Jetstream::managesProfilePhotos())
                             <div class="shrink-0 mr-3">
-                                <img class="h-24 w-24 dark:bg-white rounded-full object-cover sm:h-32 sm:w-32" src="{{ $user->profile_photo_url }}" alt="{{ $user->name }}" />
+                                <img class="h-24 w-24 dark:bg-white rounded-full object-cover sm:h-32 sm:w-32"
+                                     src="{{ $user->profile_photo_url }}" alt="{{ $user->name }}"/>
                             </div>
                         @endif
                         {{--<img class="h-24 w-24 rounded-full ring-4 ring-white sm:h-32 sm:w-32" src="https://images.unsplash.com/photo-1463453091185-61582044d556?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=8&amp;w=1024&amp;h=1024&amp;q=80" alt="">--}}

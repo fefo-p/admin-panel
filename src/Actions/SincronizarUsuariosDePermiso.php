@@ -2,6 +2,7 @@
 
     namespace FefoP\AdminPanel\Actions;
 
+    use App\Models\User;
     use Spatie\Permission\PermissionRegistrar;
 
     class SincronizarUsuariosDePermiso
@@ -10,7 +11,12 @@
 
         public function __invoke( $selected_users, $permiso ): bool|string
         {
-            $originales = $permiso->users->pluck( 'id' );
+            //$originales = $permiso->users->pluck( 'id' );
+
+            $originales = User::whereHas("permissions", function ($query) use ($permiso) {
+                return $query->where("id", $permiso);
+            })->pluck( 'id' );
+
             $finales = collect(array_keys( $selected_users ));
 
             if ( $originales == $finales ) {

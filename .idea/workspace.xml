@@ -5,8 +5,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="02cbde73-5ed5-45b2-822b-e453ce0f9246" name="Changes" comment="Included:&#10;- illuminate/container &quot;^9.52&quot;&#10;- illuminate/support &quot;^9.52&quot;">
+      <change afterPath="$PROJECT_DIR$/.idea/codeception.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/phpspec.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/phpunit.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/admin-panel.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/admin-panel.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/blade.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/blade.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/adminpanel.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/adminpanel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/adminpanel_app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/adminpanel_app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/adminpanel_app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/adminpanel_app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/permissions/livewire/permission-show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/permissions/livewire/permission-show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/roles/livewire/role-edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/roles/livewire/role-edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/roles/livewire/role-show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/roles/livewire/role-show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/top-bar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/top-bar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/users/livewire/user-edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/users/livewire/user-edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/users/livewire/user-show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/users/livewire/user-show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/adminpanel.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/adminpanel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Actions/SincronizarUsuariosDePermiso.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Actions/SincronizarUsuariosDePermiso.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Actions/SincronizarUsuariosDeRol.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Actions/SincronizarUsuariosDeRol.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AdminPanel.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AdminPanel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Models/Permission.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/Permission.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Models/Role.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/Role.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Permissions/Livewire/PermissionEdit.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Permissions/Livewire/PermissionEdit.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Permissions/Livewire/PermissionShow.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Permissions/Livewire/PermissionShow.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Roles/Livewire/RoleEdit.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Roles/Livewire/RoleEdit.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Roles/Livewire/RoleShow.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Roles/Livewire/RoleShow.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Users/Livewire/UserEdit.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Users/Livewire/UserEdit.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Users/Livewire/UserTable.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Users/Livewire/UserTable.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,10 +60,22 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="UPDATE_TYPE" value="REBASE" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;fefo-p&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;git@github.com:fefo-p/admin-panel.git&quot;,
+    &quot;accountId&quot;: &quot;63c29b3a-526a-41b3-9331-14fba860f849&quot;
+  }
+}</component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 8.2">
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="$USER_HOME$/Library/Application Support/Herd/bin/php">
     <include_path>
       <path value="$PROJECT_DIR$/vendor/psr/event-dispatcher" />
       <path value="$PROJECT_DIR$/vendor/psr/container" />
@@ -116,27 +154,38 @@
       <path value="$PROJECT_DIR$/vendor/illuminate/translation" />
       <path value="$PROJECT_DIR$/vendor/illuminate/auth" />
       <path value="$PROJECT_DIR$/vendor/guzzlehttp/uri-template" />
+      <path value="$PROJECT_DIR$/vendor/carbonphp/carbon-doctrine-types" />
+      <path value="$PROJECT_DIR$/vendor/psr/clock" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php83" />
+      <path value="$PROJECT_DIR$/vendor/_laravel_idea" />
     </include_path>
   </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
   <component name="ProjectId" id="2CMiljBHpjKEhlyLrwUA8Fv51LF" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "/Users/fefo/Development/Repository/fefo-p/admin-panel/resources/js",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "reference.webide.settings.project.settings.php"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.laravel-idea.update-module-directories&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/fefo/Developer/Packages/fefo-p/admin-panel&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.webide.settings.project.settings.php&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/resources/js" />
@@ -147,6 +196,14 @@
       <recent name="$PROJECT_DIR$/package" />
       <recent name="$PROJECT_DIR$/src" />
     </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-PS-241.14494.237" />
+        <option value="bundled-php-predefined-ba97393d7c68-8f0632a2a215-com.jetbrains.php.sharedIndexes-PS-241.14494.237" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -171,6 +228,10 @@
       <workItem from="1659034715412" duration="1191000" />
       <workItem from="1667134993293" duration="1721000" />
       <workItem from="1676558849708" duration="511000" />
+      <workItem from="1713964338928" duration="130000" />
+      <workItem from="1713965157864" duration="773000" />
+      <workItem from="1713968089760" duration="11833000" />
+      <workItem from="1714040020182" duration="4979000" />
     </task>
     <task id="LOCAL-00001" summary="- added vendor to gitignore&#10;- deleted composer.lock">
       <created>1658619420967</created>

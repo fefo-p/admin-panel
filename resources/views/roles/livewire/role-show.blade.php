@@ -56,8 +56,8 @@
                         Usuarios
                     </dt>
                     <dd class="mt-1 max-w-prose text-sm text-gray-900 dark:text-gray-200 space-y-1">
-                        @if($role->users->count())
-                            @foreach($role->users as $user)
+                        @if($users->count())
+                            @foreach($users as $user)
                                 <div class="flex flex-row items-center space-x-3">
                                     @if (Laravel\Jetstream\Jetstream::managesProfilePhotos())
                                         <div class="shrink-0">

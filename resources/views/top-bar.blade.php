@@ -7,8 +7,8 @@
             <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h7"></path>
         </svg>
     </button>
-    <div class="flex-1 px-4 flex justify-between">
-        <div class="flex-1 flex">
+    <div class="flex-1 px-4 flex justify-end">
+        {{--<div class="flex-1 flex">
             <form class="w-full flex md:ml-0" action="#" method="GET">
                 <label for="search-field" class="sr-only">Search</label>
                 <div class="relative w-full text-gray-400 focus-within:text-gray-600">
@@ -24,7 +24,7 @@
                            name="search">
                 </div>
             </form>
-        </div>
+        </div>--}}
         <div class="ml-4 flex items-center md:ml-6">
             <button type="button"
                     class="bg-white dark:bg-gray-800 p-1 rounded-full text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">

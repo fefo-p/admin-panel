@@ -4,6 +4,7 @@
     
     use App\Models\User;
     use FefoP\AdminPanel\Models\Role;
+    use Illuminate\Support\Facades\Auth;
     use Illuminate\Database\Eloquent\Builder;
     use Rappasoft\LaravelLivewireTables\Views\Column;
     use Illuminate\Auth\Access\AuthorizationException;
@@ -21,10 +22,10 @@
         public string  $tableName    = 'users';
         public ?string $pageName     = 'page';
         public         $users;
-        public         $columnSearch = [
-            'name'  => null,
-            'email' => null,
-        ];
+        //public         $columnSearch = [
+        //    'name'  => null,
+        //    'email' => null,
+        //];
         protected      $model        = User::class;
         protected      $debug        = false;
         protected      $listeners    = [ 'refreshComponent' => '$refresh' ];
@@ -32,7 +33,7 @@
         public function mount()
         {
             // $this->authorize('viewAny', User::class);
-            if ( auth()->user()?->cannot( 'ver usuarios', 'App\Models\User' ) ) {
+            if ( Auth::user()?->cannot( 'ver usuarios', 'App\Models\User' ) ) {
                 throw new AuthorizationException( 'No tiene permiso para ver listado de usuarios' );
             }
             
@@ -71,9 +72,9 @@
                 Column::make( 'ID', 'id' )
                       ->hideIf( true ),
                 Column::make( 'Nombre', 'name' )
-                      ->searchable(),
+                      ->searchable(fn(Builder $query, $searchTerm) => $query->orWhere('name', 'LIKE', "%{$searchTerm}%")),
                 Column::make( 'Email' )
-                      ->searchable()
+                      ->searchable(fn(Builder $query, $searchTerm) => $query->orWhere('email', 'LIKE', "%{$searchTerm}%"))
                       ->collapseOnTablet(),
                 BooleanColumn::make( 'Verificado', 'email_verified_at' )
                              ->sortable(),

@@ -2,6 +2,7 @@
 
     namespace FefoP\AdminPanel\Permissions\Livewire;
 
+    use App\Models\User;
     use LivewireUI\Modal\ModalComponent;
     use FefoP\AdminPanel\Models\Permission;
     use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
@@ -17,6 +18,10 @@
         {
             $this->permission = Permission::find( $permission_id );
             $this->authorize('view', $this->permission);
+
+            $this->users = User::whereHas("permissions", function ($query) use ($permission_id) {
+                return $query->where("id", $permission_id);
+            })->get();
         }
 
         public function render()
