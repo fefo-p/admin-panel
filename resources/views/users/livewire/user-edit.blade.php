@@ -41,10 +41,10 @@
 
         <div class="w-full bg-white dark:bg-gray-800 shadow px-4 py-5 sm:rounded-lg">
             <h3 class="text-md font-semibold text-gray-700 dark:text-gray-200">Roles</h3>
-            <div class="mt-4 font-light grid grid-flow-row grid-cols-2 auto-rows-max gap-x-4">
+            <div class="mt-4 font-light grid grid-flow-row grid-cols-2 auto-rows-max gap-x-4 gap-y-2">
                 @foreach($all_roles as $key => $name)
                     <div class="flex flex-row items-center justify-start">
-                        <label class="inline-flex items-center my-2 mr-6 text-sm">
+                        <label class="inline-flex items-center my-1.5 mr-6 text-sm">
                             <input wire:model="selected_roles" type="checkbox" name="roles[]"
                                    class="w-4 h-4 form-checkbox dark:bg-gray-500 dark:text-gray-800"
                                    value="{{ $key }}"

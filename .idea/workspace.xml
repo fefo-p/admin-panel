@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="02cbde73-5ed5-45b2-822b-e453ce0f9246" name="Changes" comment="v1.0.12&#10;Castellanizar opciones menú">
+    <list default="true" id="02cbde73-5ed5-45b2-822b-e453ce0f9246" name="Changes" comment="Refactorizaciòn tabla de usuarios">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AdminPanel.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AdminPanel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Users/Livewire/UserTable.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Users/Livewire/UserTable.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/adminpanel_app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/adminpanel_app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/users/livewire/user-edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/users/livewire/user-edit.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -207,7 +207,7 @@
       <workItem from="1713965157864" duration="773000" />
       <workItem from="1713968089760" duration="11833000" />
       <workItem from="1714040020182" duration="19939000" />
-      <workItem from="1714135360137" duration="13017000" />
+      <workItem from="1714135360137" duration="14767000" />
     </task>
     <task id="LOCAL-00001" summary="- added vendor to gitignore&#10;- deleted composer.lock">
       <created>1658619420967</created>
@@ -426,7 +426,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714152360541</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="Refactorizaciòn tabla de usuarios">
+      <option name="closed" value="true" />
+      <created>1714154643254</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1714154643254</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -456,7 +464,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Typo fix in Readme file" />
     <MESSAGE value="One more update to readme file" />
     <MESSAGE value="another typo fix in readme file" />
     <MESSAGE value="Improved composer.json repository info" />
@@ -481,7 +488,8 @@
     <MESSAGE value="Reformateado de columnas para roles y permisos" />
     <MESSAGE value="Quitado de menú de permisos" />
     <MESSAGE value="v1.0.12&#10;Castellanizar opciones menú" />
-    <option name="LAST_COMMIT_MESSAGE" value="v1.0.12&#10;Castellanizar opciones menú" />
+    <MESSAGE value="Refactorizaciòn tabla de usuarios" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactorizaciòn tabla de usuarios" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
