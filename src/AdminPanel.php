@@ -14,7 +14,7 @@
     {
         public function index()
         {
-            $title       = 'Dashboard';
+            $title       = 'Escritorio';
             $description = null;
             $action      = null;
 
