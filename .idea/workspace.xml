@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="02cbde73-5ed5-45b2-822b-e453ce0f9246" name="Changes" comment="Reformateado de columnas para roles y permisos">
+    <list default="true" id="02cbde73-5ed5-45b2-822b-e453ce0f9246" name="Changes" comment="Quitado de menú de permisos">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/nav-menu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/nav-menu.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/users/livewire/user-edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/users/livewire/user-edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Users/Livewire/UserEdit.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Users/Livewire/UserEdit.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AdminPanel.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AdminPanel.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -208,7 +207,7 @@
       <workItem from="1713965157864" duration="773000" />
       <workItem from="1713968089760" duration="11833000" />
       <workItem from="1714040020182" duration="19939000" />
-      <workItem from="1714135360137" duration="5999000" />
+      <workItem from="1714135360137" duration="10681000" />
     </task>
     <task id="LOCAL-00001" summary="- added vendor to gitignore&#10;- deleted composer.lock">
       <created>1658619420967</created>
@@ -411,7 +410,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714139451584</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Quitado de menú de permisos">
+      <option name="closed" value="true" />
+      <created>1714142159354</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1714142159354</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -441,7 +448,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="- added vendor to gitignore" />
     <MESSAGE value="Added Readme file" />
     <MESSAGE value="Typo fix in Readme file" />
     <MESSAGE value="One more update to readme file" />
@@ -466,7 +472,8 @@
     <MESSAGE value="Quitar habilidad de asignar/borrar usuarios de un rol/permiso.&#10;Ahora se hace desde el módulo de usuarios" />
     <MESSAGE value="Borrado de variables que ya no se usan" />
     <MESSAGE value="Reformateado de columnas para roles y permisos" />
-    <option name="LAST_COMMIT_MESSAGE" value="Reformateado de columnas para roles y permisos" />
+    <MESSAGE value="Quitado de menú de permisos" />
+    <option name="LAST_COMMIT_MESSAGE" value="Quitado de menú de permisos" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

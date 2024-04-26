@@ -27,8 +27,8 @@
 
         public function about()
         {
-            $title       = 'About';
-            $description = 'Alguna descripción por acá...';
+            $title       = 'Configuración';
+            $description = 'Variables de estado';
             $action      = null;
             $config      = config('adminpanel');
             Artisan::call('about');
@@ -45,7 +45,7 @@
 
         public function users(Request $request)
         {
-            $title       = 'Users Index';
+            $title       = 'Listado de Usuarios';
             $description = 'Listado de usuarios definidos en el sistema';
             $action      = [
                 'name'      => 'Crear usuario',
@@ -68,7 +68,7 @@
 
         public function roles()
         {
-            $title       = 'Roles Index';
+            $title       = 'Listado de Roles';
             $description = 'Roles definidos en el sistema';
             $action      = [
                 'name'      => 'Crear rol',
@@ -86,7 +86,7 @@
 
         public function permissions()
         {
-            $title       = 'Permissions Index';
+            $title       = 'Listado de Permisos';
             $description = 'Permisos definidos en el sistema';
             $action      = [
                 'name'      => 'Crear permiso',
