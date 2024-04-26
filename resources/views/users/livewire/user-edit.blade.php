@@ -40,7 +40,7 @@
         </div>
 
         <div class="w-full bg-white dark:bg-gray-800 shadow px-4 py-5 sm:rounded-lg">
-            <h3 class="text-md font-semibold">Roles</h3>
+            <h3 class="text-md font-semibold text-gray-700 dark:text-gray-200">Roles</h3>
             <div class="mt-4 font-light grid grid-flow-row grid-cols-2 auto-rows-max gap-x-4">
                 @foreach($all_roles as $key => $name)
                     <div class="flex flex-row items-center justify-start">
@@ -49,7 +49,7 @@
                                    class="w-4 h-4 form-checkbox dark:bg-gray-500 dark:text-gray-800"
                                    value="{{ $key }}"
                                    @if($selected_roles->contains($key)) checked @endif>
-                            <span class="ml-2 ">
+                            <span class="ml-2 dark:text-gray-400">
                                 {{ $name }}
                             </span>
                         </label>
@@ -58,9 +58,8 @@
             </div>
         </div>
 
-
         <div class="w-full bg-white dark:bg-gray-800 shadow px-4 py-5 sm:rounded-lg">
-            <h3 class="text-md font-semibold">Permisos</h3>
+            <h3 class="text-md font-semibold text-gray-700 dark:text-gray-200">Permisos</h3>
             <div class="mt-4 font-light grid grid-flow-row grid-cols-3 auto-rows-max gap-x-4">
                 @foreach($all_permissions as $key => $name)
                     <div class="flex flex-row items-center justify-start">
@@ -69,7 +68,7 @@
                                    class="w-4 h-4 form-checkbox dark:bg-gray-500 dark:text-gray-800"
                                    value="{{ $key }}"
                                    @if($selected_permissions->contains($key)) checked @endif>
-                            <span class="ml-2 ">
+                            <span class="ml-2 dark:text-gray-400">
                                 {{ $name }}
                             </span>
                         </label>

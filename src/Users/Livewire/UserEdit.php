@@ -5,7 +5,6 @@
     use App\Models\User;
     use FefoP\AdminPanel\Models\Role;
     use LivewireUI\Modal\ModalComponent;
-    use Illuminate\Support\Facades\Auth;
     use FefoP\AdminPanel\Models\Permission;
     use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 
