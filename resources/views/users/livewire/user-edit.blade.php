@@ -40,75 +40,43 @@
         </div>
 
         <div class="w-full bg-white dark:bg-gray-800 shadow px-4 py-5 sm:rounded-lg">
-            <div class="flex flex-row items-center justify-between space-x-6">
-                <div class="w-1/2">
-                    <dt class="text-sm font-medium text-gray-500 dark:text-gray-400">Roles</dt>
-                    <dd class="mt-1 max-w-prose text-sm text-gray-900 dark:text-gray-200 space-y-1">
-                        @foreach($all_roles as $key => $name)
-                            <div class="ml-4 pl-4">
-                                <input wire:model="selected_roles"
-                                        type="checkbox"
-                                        name="roles[]"
-                                        value="{{ $key }}"
-                                        id="{{ $key }}"
-                                        @if($selected_roles->contains($key)) checked @endif
-                                />
-                                <label class="ml-4">{{ $name }}</label>
-                            </div>
-                        @endforeach
-                    </dd>
-                </div>
-
-                <div class="w-1/2">
-                    <dt class="text-sm font-medium text-gray-500 dark:text-gray-400">Permisos</dt>
-                    <dd class="mt-1 max-w-prose text-sm text-gray-900 dark:text-gray-200 space-y-1">
-                        @foreach($all_permissions as $key => $name)
-                            <div class="ml-4 pl-4">
-                                <input wire:model="selected_permissions"
-                                       type="checkbox"
-                                       name="permissions[]"
-                                       value="{{ $key }}"
-                                       id="{{ $key }}"
-                                       @if($selected_permissions->contains($key)) checked @endif
-                                />
-                                <label class="ml-4">{{ $name }}</label>
-                            </div>
-                        @endforeach
-                    </dd>
-                </div>
+            <h3 class="text-md font-semibold">Roles</h3>
+            <div class="mt-4 font-light grid grid-flow-row grid-cols-2 auto-rows-max gap-x-4">
+                @foreach($all_roles as $key => $name)
+                    <div class="flex flex-row items-center justify-start">
+                        <label class="inline-flex items-center my-2 mr-6 text-sm">
+                            <input wire:model="selected_roles" type="checkbox" name="roles[]"
+                                   class="w-4 h-4 form-checkbox dark:bg-gray-500 dark:text-gray-800"
+                                   value="{{ $key }}"
+                                   @if($selected_roles->contains($key)) checked @endif>
+                            <span class="ml-2 ">
+                                {{ $name }}
+                            </span>
+                        </label>
+                    </div>
+                @endforeach
             </div>
         </div>
 
 
-        {{--<div class="w-full bg-white dark:bg-gray-800 shadow px-4 py-5 sm:rounded-lg">
-            <div class="flex flex-row items-center justify-between space-x-6">
-                <div class="w-1/2">
-                    <dt class="text-sm font-medium text-gray-500 dark:text-gray-400">Roles</dt>
-                    <dd class="mt-1 max-w-prose text-sm text-gray-900 dark:text-gray-200 space-y-1">
-                        @if(count($selected_roles))
-                            @foreach($selected_roles as $key => $name)
-                                <p class="ml-4 pl-4">{{$name}}</p>
-                            @endforeach
-                        @else
-                            <p class="text-red-500">Sin roles asignados</p>
-                        @endif
-                    </dd>
-                </div>
-
-                <div class="w-1/2">
-                    <dt class="text-sm font-medium text-gray-500 dark:text-gray-400">Permisos</dt>
-                    <dd class="mt-1 max-w-prose text-sm text-gray-900 dark:text-gray-200 space-y-1">
-                        @if(count($selected_permissions))
-                            @foreach($selected_permissions as $key => $name)
-                                <p class="ml-4 pl-4">{{$name}}</p>
-                            @endforeach
-                        @else
-                            <p class="text-red-500">Sin permisos asignados</p>
-                        @endif
-                    </dd>
-                </div>
+        <div class="w-full bg-white dark:bg-gray-800 shadow px-4 py-5 sm:rounded-lg">
+            <h3 class="text-md font-semibold">Permisos</h3>
+            <div class="mt-4 font-light grid grid-flow-row grid-cols-3 auto-rows-max gap-x-4">
+                @foreach($all_permissions as $key => $name)
+                    <div class="flex flex-row items-center justify-start">
+                        <label class="inline-flex items-center mb-1.5 mr-6 text-sm">
+                            <input wire:model="selected_permissions" type="checkbox" name="permissions[]"
+                                   class="w-4 h-4 form-checkbox dark:bg-gray-500 dark:text-gray-800"
+                                   value="{{ $key }}"
+                                   @if($selected_permissions->contains($key)) checked @endif>
+                            <span class="ml-2 ">
+                                {{ $name }}
+                            </span>
+                        </label>
+                    </div>
+                @endforeach
             </div>
-        </div>--}}
+        </div>
 
         <div class="flex justify-end">
             <x-ap-secondary-button wire:click="cancelar" type="button">
