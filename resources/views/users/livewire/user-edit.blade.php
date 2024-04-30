@@ -38,7 +38,6 @@
                 </div>
             </div>
         </div>
-
         <div class="w-full bg-white dark:bg-gray-800 shadow px-4 py-5 sm:rounded-lg">
             <h3 class="text-md font-semibold text-gray-700 dark:text-gray-200">Roles</h3>
             <div class="mt-4 font-light grid grid-flow-row grid-cols-2 auto-rows-max gap-x-4 gap-y-2">

@@ -25,6 +25,12 @@
         'guard'               => env('ADMIN_PANEL_DEFAULT_GUARD', 'web'),
 
         /**
+         * Database table where audit data will be stored
+         */
+        'database_connection' => env('ADMINPANEL_DATABASE_CONNECTION', 'mysql'),
+        'table'               => env('ADMINPANEL_TABLE', 'auditoria_adminpanel'),
+
+        /**
          * Livewire components that should be registered
          */
         'livewire-components' => [
