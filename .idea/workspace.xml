@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="02cbde73-5ed5-45b2-822b-e453ce0f9246" name="Changes" comment="Menos separación para listado de permisos">
-      <change afterPath="$PROJECT_DIR$/database/migrations/add_database_table_for_adminpanel.php" afterDir="false" />
+    <list default="true" id="02cbde73-5ed5-45b2-822b-e453ce0f9246" name="Changes" comment="Added table migration for activity audit&#10;and publishing config">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/adminpanel.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/adminpanel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/users/livewire/user-edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/users/livewire/user-edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AdminPanelServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AdminPanelServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/add_database_table_for_adminpanel.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/add_database_table_for_adminpanel.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -212,7 +209,7 @@
       <workItem from="1714135360137" duration="15464000" />
       <workItem from="1714484016352" duration="3934000" />
       <workItem from="1714496530409" duration="126000" />
-      <workItem from="1714496667751" duration="2448000" />
+      <workItem from="1714496667751" duration="3272000" />
     </task>
     <task id="LOCAL-00001" summary="- added vendor to gitignore&#10;- deleted composer.lock">
       <created>1658619420967</created>
@@ -447,7 +444,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714156465475</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="Added table migration for activity audit&#10;and publishing config">
+      <option name="closed" value="true" />
+      <created>1714500827817</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1714500827817</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -477,7 +482,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="another typo fix in readme file" />
     <MESSAGE value="Improved composer.json repository info" />
     <MESSAGE value="Added background to default profile image in top bar while in dark-mode" />
     <MESSAGE value="- changed &quot;key&quot; menu for &quot;about&quot;&#10;- formatted artisan about command output" />
@@ -502,7 +506,8 @@
     <MESSAGE value="v1.0.12&#10;Castellanizar opciones menú" />
     <MESSAGE value="Refactorizaciòn tabla de usuarios" />
     <MESSAGE value="Menos separación para listado de permisos" />
-    <option name="LAST_COMMIT_MESSAGE" value="Menos separación para listado de permisos" />
+    <MESSAGE value="Added table migration for activity audit&#10;and publishing config" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added table migration for activity audit&#10;and publishing config" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
