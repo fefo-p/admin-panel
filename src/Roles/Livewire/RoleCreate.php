@@ -21,6 +21,8 @@
         {
             $role = Role::create( $this->validar() );
 
+            // @TODO: Log action to config('adminpanel.table')
+
             $this->emitTo( 'adminpanel::role-table', 'refreshComponent' );
             $this->closeModal();
         }

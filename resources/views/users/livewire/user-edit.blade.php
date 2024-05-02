@@ -14,7 +14,10 @@
                             <div class="col-span-6 sm:col-span-3">
                                 <label for="name" class="block text-sm font-medium text-gray-700 dark:text-gray-500">Nombre
                                     Completo</label>
-                                <input type="text" wire:model="name" name="name" id="name"
+                                <input type="text"
+                                       wire:model="name"
+                                       name="name"
+                                       id="name"
                                        class="dark:bg-gray-700 dark:text-gray-400 mt-1 focus:ring-blue-500 dark:border-gray-700 focus:border-blue-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
                                 <x-jet-input-error for="name"/>
                             </div>
@@ -22,14 +25,20 @@
                             <div class="col-span-6 sm:col-span-3">
                                 <label for="email" class="block text-sm font-medium text-gray-700 dark:text-gray-500">Email
                                     address</label>
-                                <input type="text" wire:model="email" name="email" id="email"
+                                <input type="text"
+                                       wire:model="email"
+                                       name="email"
+                                       id="email"
                                        class="dark:bg-gray-700 dark:text-gray-400 mt-1 focus:ring-blue-500 dark:border-gray-700 focus:border-blue-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
                                 <x-jet-input-error for="email"/>
                             </div>
 
                             <div class="col-span-6 sm:col-span-3 lg:col-span-2">
                                 <label for="cuil" class="block text-sm font-medium text-gray-700 dark:text-gray-500">CUIL</label>
-                                <input type="text" wire:model="cuil" name="cuil" id="cuil"
+                                <input type="text"
+                                       wire:model="cuil"
+                                       name="cuil"
+                                       id="cuil"
                                        class="dark:bg-gray-700 dark:text-gray-400 mt-1 focus:ring-blue-500 dark:border-gray-700 focus:border-blue-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
                                 <x-jet-input-error for="cuil"/>
                             </div>
@@ -44,13 +53,13 @@
                 @foreach($all_roles as $key => $name)
                     <div class="flex flex-row items-center justify-start">
                         <label class="inline-flex items-center my-1.5 mr-6 text-sm">
-                            <input wire:model="selected_roles" type="checkbox" name="roles[]"
+                            <input wire:model="selected_roles"
+                                   type="checkbox"
+                                   name="roles[]"
                                    class="w-4 h-4 form-checkbox dark:bg-gray-500 dark:text-gray-800"
                                    value="{{ $key }}"
                                    @if($selected_roles->contains($key)) checked @endif>
-                            <span class="ml-2 dark:text-gray-400">
-                                {{ $name }}
-                            </span>
+                            <span class="ml-2 dark:text-gray-400">{{ $name }}</span>
                         </label>
                     </div>
                 @endforeach
@@ -63,7 +72,9 @@
                 @foreach($all_permissions as $key => $name)
                     <div class="flex flex-row items-center justify-start">
                         <label class="inline-flex items-center mb-1.5 mr-6 text-sm">
-                            <input wire:model="selected_permissions" type="checkbox" name="permissions[]"
+                            <input wire:model="selected_permissions"
+                                   type="checkbox"
+                                   name="permissions[]"
                                    class="w-4 h-4 form-checkbox dark:bg-gray-500 dark:text-gray-800"
                                    value="{{ $key }}"
                                    @if($selected_permissions->contains($key)) checked @endif>
@@ -80,7 +91,8 @@
             <x-ap-secondary-button wire:click="cancelar" type="button">
                 Cancelar
             </x-ap-secondary-button>
-            <x-ap-button wire:click="actualizar" type="submit"
+            <x-ap-button wire:click="actualizar"
+                         type="submit"
                          class="ml-3 bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
                 Actualizar
             </x-ap-button>

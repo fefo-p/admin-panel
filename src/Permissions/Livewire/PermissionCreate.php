@@ -24,6 +24,8 @@
         {
             $permission = Permission::create( $this->validar() );
 
+            // @TODO: Log action to config('adminpanel.table')
+
             $this->emitTo( 'adminpanel::permission-table', 'refreshComponent' );
             $this->closeModal();
         }

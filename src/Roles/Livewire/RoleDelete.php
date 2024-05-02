@@ -32,6 +32,8 @@
 
             $this->role->delete();
 
+            // @TODO: Log action to config('adminpanel.table')
+
             $this->emitTo( 'adminpanel::role-table', 'refreshComponent' );
             $this->closeModal();
         }

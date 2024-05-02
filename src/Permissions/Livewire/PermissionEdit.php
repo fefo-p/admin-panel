@@ -84,6 +84,8 @@
             // $output_roles    = ( new SincronizarRolesDePermiso )( $this->selected_roles, $this->permission );
             $output_usuarios = ( new SincronizarUsuariosDePermiso )($this->selected_users, $this->permission);
 
+            // @TODO: Log action to config('adminpanel.table')
+
             $this->emitTo('adminpanel::permission-table', 'refreshComponent');
             $this->closeModal();
         }

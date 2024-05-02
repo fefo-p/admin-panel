@@ -38,6 +38,8 @@
                                                         'password_confirmation' => $pwd,
                                                     ]);
 
+            // @TODO: Log action to config('adminpanel.table')
+
             $this->emitTo('adminpanel::user-table', 'refreshComponent');
             $this->closeModal();
         }

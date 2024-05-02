@@ -62,6 +62,8 @@
                                     'cuil'  => $validated[ 'cuil' ],
                                 ]);
 
+            // @TODO: Log action to config('adminpanel.table')
+
             $this->user->refresh();
             $this->user->syncRoles($this->selected_roles);
             $this->user->syncPermissions($this->selected_permissions);
