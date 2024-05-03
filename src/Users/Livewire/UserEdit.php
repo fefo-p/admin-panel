@@ -3,10 +3,14 @@
     namespace FefoP\AdminPanel\Users\Livewire;
 
     use App\Models\User;
+    use Illuminate\Http\Request;
     use FefoP\AdminPanel\Models\Role;
     use LivewireUI\Modal\ModalComponent;
+    use FefoP\AdminPanel\Models\Activity;
     use FefoP\AdminPanel\Models\Permission;
+    use FefoP\AdminPanel\Actions\SincronizarRolesDeUsuario;
     use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
+    use FefoP\AdminPanel\Actions\SincronizarPermisosDeUsuario;
 
     class UserEdit extends ModalComponent
     {
@@ -40,6 +44,7 @@
             $this->all_permissions      = Permission::pluck('name', 'id');
             $this->selected_roles       = $this->user->roles->pluck('id');
             $this->selected_permissions = $this->user->permissions->pluck('id');
+            $this->separator            = config('adminpanel.log.separator');
         }
 
         public function updatedSelectedRoles(): void
@@ -52,22 +57,67 @@
             $this->selected_permissions = collect($this->selected_permissions);
         }
 
-        public function actualizar(): void
+        public function actualizar(Request $request): void
         {
-            $validated = $this->validar();
+            $validated         = $this->validar();
+            $this->user->name  = $validated[ 'name' ];
+            $this->user->email = $validated[ 'email' ];
+            $this->user->cuil  = $validated[ 'cuil' ];
 
-            $this->user->update([
-                                    'name'  => $validated[ 'name' ],
-                                    'email' => $validated[ 'email' ],
-                                    'cuil'  => $validated[ 'cuil' ],
-                                ]);
+            $old = [];
+            $new = [];
 
-            // @TODO: Log action to config('adminpanel.table')
+            $dirtyAttributes = $this->user->getDirty();
 
+            if ( !empty($dirtyAttributes) ) {
+                // Log the changes to an audit table
+                foreach ( $dirtyAttributes as $attribute => $newValue ) {
+                    $oldValue = $this->user->getOriginal($attribute); // Get the original value
+
+                    $old[ $attribute ] = $oldValue;
+                    $new[ $attribute ] = $newValue;
+                }
+            }
+
+            $this->user->save();
             $this->user->refresh();
-            $this->user->syncRoles($this->selected_roles);
-            $this->user->syncPermissions($this->selected_permissions);
 
+            [
+                $roles_accion, $roles_borrados, $roles_agregados,
+            ] = ( new SincronizarRolesDeUsuario )($this->selected_roles, $this->user);
+            [
+                $permisos_accion, $permisos_borrados, $permisos_agregados,
+            ] = ( new SincronizarPermisosDeUsuario )($this->selected_permissions, $this->user);
+
+            $act = Activity::write([
+                                       'ip'           => $request->getClientIp(),
+                                       'subject_type' => 'App\Models\User',
+                                       'subject_id'   => $this->user->id,
+                                       'subject_cuil' => $this->user->cuil,
+                                       'event'        => 'user updated',
+                                       'properties'   => json_encode([
+                                                                         'id'      => $this->user->id,
+                                                                         'cuil'    => $this->user->cuil,
+                                                                         'deleted' => [
+                                                                             ...$old,
+                                                                             'roles'       => $roles_borrados,
+                                                                             'permissions' => $permisos_borrados,
+                                                                         ],
+                                                                         'added'   => [
+                                                                             ...$new,
+                                                                             'roles'       => $roles_agregados,
+                                                                             'permissions' => $permisos_agregados,
+                                                                         ],
+                                                                     ]),
+                                   ]);
+
+            $act->log(
+                $act->created_at.$this->separator.
+                $act->ip.$this->separator.
+                $act->user_cuil.$this->separator.
+                $act->event.$this->separator.
+                $act->properties
+            );
             $this->emitTo('adminpanel::user-table', 'refreshComponent');
             $this->closeModal();
         }

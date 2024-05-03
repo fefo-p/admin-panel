@@ -13,14 +13,13 @@
         public     $role;
         public int $role_id;
         public     $mensaje_error;
-        protected $separator;
 
-        public function mount( int $role_id, string $action )
+        public function mount(int $role_id, string $action)
         {
             Auth::user()->can('borrar roles');
-    
-            $this->role = Role::find( $role_id );
-            $this->separator = config( 'adminpanel.log.separator' );
+
+            $this->role      = Role::find($role_id);
+            $this->separator = config('adminpanel.log.separator');
         }
 
         public function confirmar(Request $request)
@@ -35,15 +34,18 @@
                 return false;
             }
 
+            $id = $this->role->id;
             $this->role->delete();
 
             $act = Activity::write([
                                        'ip'           => $request->getClientIp(),
-                                       'subject_type' => config('permission.models.role'), //FefoP\AdminPanel\Models\Role
-                                       'subject_id'   => $this->role->id,
+                                       'subject_type' => config('permission.models.role'),
+                                       'subject_id'   => $id,
                                        'subject_cuil' => null,
                                        'event'        => 'role deleted',
-                                       'properties'   => [],
+                                       'properties'   => json_encode([
+                                                                         'id' => $id,
+                                                                     ]),
                                    ]);
 
             $act->log(
@@ -54,7 +56,7 @@
                 $act->properties
             );
 
-            $this->emitTo( 'adminpanel::role-table', 'refreshComponent' );
+            $this->emitTo('adminpanel::role-table', 'refreshComponent');
             $this->closeModal();
         }
 
@@ -70,12 +72,12 @@
 
         public function cancel()
         {
-            $this->emitTo( 'adminpanel::role-table', 'refreshComponent' );
+            $this->emitTo('adminpanel::role-table', 'refreshComponent');
             $this->closeModal();
         }
 
         public function render()
         {
-            return view( 'adminpanel::roles.livewire.role-delete' );
+            return view('adminpanel::roles.livewire.role-delete');
         }
     }

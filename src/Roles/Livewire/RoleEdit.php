@@ -10,7 +10,6 @@
     use FefoP\AdminPanel\Models\Permission;
     use Illuminate\Database\Eloquent\Collection;
     use FefoP\AdminPanel\Actions\SincronizarPermisosDeRol;
-    use FefoP\AdminPanel\Actions\SincronizarUsuariosDeRol;
     use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 
     class RoleEdit extends ModalComponent
@@ -107,7 +106,7 @@
 
             [ $accion, $borrados, $agregados ] = ( new SincronizarPermisosDeRol )($this->selected_permissions,
                                                                                   $this->role);
-            $output_usuarios = ( new SincronizarUsuariosDeRol )($this->selected_users, $this->role);
+            //$output_usuarios = ( new SincronizarUsuariosDeRol )($this->selected_users, $this->role);
 
             $act = Activity::write([
                                        'ip'           => $request->getClientIp(),
