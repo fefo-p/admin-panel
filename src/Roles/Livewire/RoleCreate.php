@@ -25,7 +25,6 @@
         {
             $role = Role::create($this->validar());
 
-            // @TODO: Log action to config('adminpanel.table')
             $act = Activity::write([
                                        'ip'           => $request->getClientIp(),
                                        'subject_type' => config('permission.models.role'), //FefoP\AdminPanel\Models\Role

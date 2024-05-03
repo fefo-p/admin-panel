@@ -5,7 +5,7 @@
                 <div class="md:col-span-1">
                     <h3 class="text-lg font-medium leading-6 text-gray-900 dark:text-gray-200">Editar Rol</h3>
                     <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">
-                        Use a permanent address where you can receive mail.
+                        Cambiar el nombre del rol NO modificará los usuarios que contienen el rol, ni sus permisos.
                     </p>
                 </div>
                 <div class="mt-5 md:mt-0 md:col-span-2">
@@ -18,13 +18,13 @@
                                 <x-jet-input-error for="name"/>
                             </div>
 
-                            <div class="col-span-6 sm:col-span-3">
+                            {{--<div class="col-span-6 sm:col-span-3">
                                 <label for="guard_name"
                                        class="block text-sm font-medium text-gray-700 dark:text-gray-500">Guard</label>
                                 <input type="text" wire:model="guard_name" name="guard_name" id="guard_name"
                                        class="dark:bg-gray-700 dark:text-gray-400 mt-1 focus:ring-blue-500 dark:border-gray-700 focus:border-blue-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
                                 <x-jet-input-error for="guard_name"/>
-                            </div>
+                            </div>--}}
                         </div>
                     </form>
                 </div>

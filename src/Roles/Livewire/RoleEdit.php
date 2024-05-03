@@ -202,6 +202,7 @@
 
             // Quitar el permiso de la colección de permisos disponibles
             unset($this->available_permissions[ $permiso->id ]);
+            $this->refresh_available_permissions();
         }
 
         public function quitar_permiso($permiso_id)

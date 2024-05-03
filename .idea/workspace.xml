@@ -4,17 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="02cbde73-5ed5-45b2-822b-e453ce0f9246" name="Changes" comment="Added TODO comments on the places selected to update the DB with the actions done">
-      <change afterPath="$PROJECT_DIR$/database/migrations/create_activities_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Models/Activity.php" afterDir="false" />
+    <list default="true" id="02cbde73-5ed5-45b2-822b-e453ce0f9246" name="Changes" comment="Added logging capabilities for role creation/edition/deletion and user creation">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/adminpanel.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/adminpanel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Actions/SincronizarPermisosDeRol.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Actions/SincronizarPermisosDeRol.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AdminPanelServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AdminPanelServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/roles/livewire/role-edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/roles/livewire/role-edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Roles/Livewire/RoleCreate.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Roles/Livewire/RoleCreate.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Roles/Livewire/RoleDelete.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Roles/Livewire/RoleDelete.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Roles/Livewire/RoleEdit.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Roles/Livewire/RoleEdit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Users/Livewire/UserCreate.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Users/Livewire/UserCreate.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -219,7 +213,7 @@
       <workItem from="1714496530409" duration="126000" />
       <workItem from="1714496667751" duration="3473000" />
       <workItem from="1714645720754" duration="17447000" />
-      <workItem from="1714731066318" duration="2060000" />
+      <workItem from="1714731066318" duration="2978000" />
     </task>
     <task id="LOCAL-00001" summary="- added vendor to gitignore&#10;- deleted composer.lock">
       <created>1658619420967</created>
@@ -478,7 +472,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714649163229</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="Added logging capabilities for role creation/edition/deletion and user creation">
+      <option name="closed" value="true" />
+      <created>1714733600746</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1714733600746</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -508,7 +510,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="- changed &quot;key&quot; menu for &quot;about&quot;&#10;- formatted artisan about command output" />
     <MESSAGE value="- added possibility to define admin user while installing&#10;- implementes policies for user, role and permission models" />
     <MESSAGE value="- added version comments to config file&#10;- tagged as v1.0.1" />
     <MESSAGE value="- removed verion number from composer.json&#10;- added debugbar as a require-dev" />
@@ -533,7 +534,8 @@
     <MESSAGE value="Added table migration for activity audit&#10;and publishing config" />
     <MESSAGE value="Added more columns to activity table" />
     <MESSAGE value="Added TODO comments on the places selected to update the DB with the actions done" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added TODO comments on the places selected to update the DB with the actions done" />
+    <MESSAGE value="Added logging capabilities for role creation/edition/deletion and user creation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added logging capabilities for role creation/edition/deletion and user creation" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
