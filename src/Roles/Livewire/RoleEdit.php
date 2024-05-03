@@ -3,8 +3,10 @@
     namespace FefoP\AdminPanel\Roles\Livewire;
 
     use App\Models\User;
+    use Illuminate\Http\Request;
     use FefoP\AdminPanel\Models\Role;
     use LivewireUI\Modal\ModalComponent;
+    use FefoP\AdminPanel\Models\Activity;
     use FefoP\AdminPanel\Models\Permission;
     use Illuminate\Database\Eloquent\Collection;
     use FefoP\AdminPanel\Actions\SincronizarPermisosDeRol;
@@ -49,6 +51,7 @@
 
             $this->permiso_a_agregar = null;
             $this->usuario_a_agregar = null;
+            $this->separator         = config('adminpanel.log.separator');
         }
 
         /**
@@ -79,14 +82,59 @@
             $this->available_users = $available_users ?? [];
         }
 
-        public function actualizar()
+        public function actualizar(Request $request): void
         {
-            $this->role->update($this->validar());
+            $validated              = $this->validar();
+            $this->role->name       = $validated[ 'name' ];
+            $this->role->guard_name = $validated[ 'guard_name' ];
 
-            $output_permisos = ( new SincronizarPermisosDeRol )($this->selected_permissions, $this->role);
+            $old = [];
+            $new = [];
+
+            $dirtyAttributes = $this->role->getDirty();
+
+            if ( !empty($dirtyAttributes) ) {
+                // Log the changes to an audit table
+                foreach ( $dirtyAttributes as $attribute => $newValue ) {
+                    $oldValue = $this->role->getOriginal($attribute); // Get the original value
+
+                    $old[ $attribute ] = $oldValue;
+                    $new[ $attribute ] = $newValue;
+                }
+            }
+
+            $this->role->save();
+
+            [ $accion, $borrados, $agregados ] = ( new SincronizarPermisosDeRol )($this->selected_permissions,
+                                                                                  $this->role);
             $output_usuarios = ( new SincronizarUsuariosDeRol )($this->selected_users, $this->role);
 
-            // @TODO: Log action to config('adminpanel.table')
+            $act = Activity::write([
+                                       'ip'           => $request->getClientIp(),
+                                       'subject_type' => config('permission.models.role'),
+                                       'subject_id'   => $this->role->id,
+                                       'subject_cuil' => null,
+                                       'event'        => 'role updated',
+                                       'properties'   => json_encode([
+                                                                         'id'  => $this->role->id,
+                                                                         'deleted' => [
+                                                                             ...$old,
+                                                                             'permissions' => $borrados,
+                                                                         ],
+                                                                         'added' => [
+                                                                             ...$new,
+                                                                             'permissions' => $agregados,
+                                                                         ],
+                                                                     ]),
+                                   ]);
+
+            $act->log(
+                $act->created_at.$this->separator.
+                $act->ip.$this->separator.
+                $act->user_cuil.$this->separator.
+                $act->event.$this->separator.
+                $act->properties
+            );
 
             $this->emitTo('adminpanel::role-table', 'refreshComponent');
             $this->closeModal();

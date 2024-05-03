@@ -30,6 +30,10 @@
         'database_connection' => env('ADMINPANEL_DATABASE_CONNECTION', 'mysql'),
         'table'               => env('ADMINPANEL_TABLE', 'auditoria_adminpanel'),
 
+        'log' => [
+            'separator' => env('ADMINPANEL_LOG_SEPARATOR', '|'),
+        ],
+
         /**
          * Livewire components that should be registered
          */
