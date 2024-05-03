@@ -75,8 +75,9 @@
 
             $this->publishes([
                                  __DIR__.'/../database/migrations/add_deleted_at_field_to_users_table.php' => $this->getMigrationFileName('add_deleted_at_field_to_users_table.php'),
-                                 //__DIR__.'/../database/migrations/add_database_table_for_adminpanel.php'   => $this->getMigrationFileName('add_database_table_for_adminpanel.php'),
+                                 //__DIR__.'/../database/migrations/add_database_table_for_adminpanel.php' => $this->getMigrationFileName('add_database_table_for_adminpanel.php'),
                                  __DIR__.'/../database/migrations/create_activities_table.php'             => $this->getMigrationFileName('create_activities_table.php'),
+                                 __DIR__.'/../database/migrations/add_soft_deletes_to_spatie_roles.php'    => $this->getMigrationFileName('add_soft_deletes_to_spatie_roles.php'),
                              ], [ 'adminpanel', 'adminpanel-migrations' ]);
 
             $this->publishes([
