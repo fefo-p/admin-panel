@@ -62,7 +62,7 @@
                 'users'       => $users,
                 'title'       => $title ?? null,
                 'description' => $description ?? null,
-                'action'      => Auth::user()?->can('crear usuarios', 'App\Models\User') ? $action : null,
+                'action'      => Auth::user()?->can('adminpanel.usuario.crear', 'App\Models\User') ? $action : null,
             ]);
         }
 
@@ -80,7 +80,7 @@
                 'roles'       => $roles,
                 'title'       => $title ?? null,
                 'description' => $description ?? null,
-                'action'      => Auth::user()?->can('crear roles', 'FefoP\AdminPanel\Models\Role') ? $action : null,
+                'action'      => Auth::user()?->can('adminpanel.rol.crear', 'FefoP\AdminPanel\Models\Role') ? $action : null,
             ]);
         }
 
@@ -98,7 +98,7 @@
                 'permissions' => $permissions,
                 'title'       => $title ?? null,
                 'description' => $description ?? null,
-                'action'      => Auth::user()?->can('crear permisos',
+                'action'      => Auth::user()?->can('adminpanel.permiso.crear',
                                                     'FefoP\AdminPanel\Models\Permission') ? $action : null,
             ]);
         }

@@ -25,7 +25,7 @@
         public function mount()
         {
             // $this->authorize('viewAny', User::class);
-            if ( Auth::user()?->cannot('ver usuarios', 'App\Models\User') ) {
+            if ( Auth::user()?->cannot('adminpanel.usuario.ver', 'App\Models\User') ) {
                 throw new AuthorizationException('No tiene permiso para ver listado de usuarios');
             }
         }

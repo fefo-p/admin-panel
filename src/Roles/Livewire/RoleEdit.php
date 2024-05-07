@@ -32,7 +32,7 @@
 
         public function mount(int $role_id)
         {
-            //Auth::user()->can('editar roles');
+            //Auth::user()->can('adminpanel.rol.editar');
             $this->role = Role::find($role_id);
             $this->authorize('update', $this->role);
 

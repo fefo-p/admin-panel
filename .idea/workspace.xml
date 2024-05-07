@@ -4,12 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="02cbde73-5ed5-45b2-822b-e453ce0f9246" name="Changes" comment="Fix: role delete writes ok to log">
-      <change afterPath="$PROJECT_DIR$/database/migrations/add_soft_deletes_to_spatie_roles.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Console/UpdateCommand.php" afterDir="false" />
+    <list default="true" id="02cbde73-5ed5-45b2-822b-e453ce0f9246" name="Changes" comment="Added softdeletes to Role model">
+      <change afterPath="$PROJECT_DIR$/src/Actions/SincronizarPermisosDeAdministrador.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AdminPanelServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AdminPanelServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Models/Role.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/Role.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/adminpanel.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/adminpanel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Actions/SincronizarPermisosDeRol.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Actions/SincronizarPermisosDeRol.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AdminPanel.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AdminPanel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Console/InstallCommand.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Console/InstallCommand.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Middlewares/IsAdmin.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Middlewares/IsAdmin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Policies/PermissionPolicy.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Policies/PermissionPolicy.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Policies/RolePolicy.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Policies/RolePolicy.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Policies/UserPolicy.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Policies/UserPolicy.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Roles/Livewire/RoleCreate.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Roles/Livewire/RoleCreate.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Roles/Livewire/RoleDelete.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Roles/Livewire/RoleDelete.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Roles/Livewire/RoleEdit.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Roles/Livewire/RoleEdit.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Users/Livewire/UserDelete.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Users/Livewire/UserDelete.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Users/Livewire/UserShow.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Users/Livewire/UserShow.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Users/Livewire/UserTable.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Users/Livewire/UserTable.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -217,7 +228,9 @@
       <workItem from="1714496530409" duration="126000" />
       <workItem from="1714496667751" duration="3473000" />
       <workItem from="1714645720754" duration="17447000" />
-      <workItem from="1714731066318" duration="18204000" />
+      <workItem from="1714731066318" duration="19350000" />
+      <workItem from="1715090220870" duration="4701000" />
+      <workItem from="1715100555048" duration="1309000" />
     </task>
     <task id="LOCAL-00001" summary="- added vendor to gitignore&#10;- deleted composer.lock">
       <created>1658619420967</created>
@@ -500,7 +513,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714746578940</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="Added softdeletes to Role model">
+      <option name="closed" value="true" />
+      <created>1714755316403</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1714755316403</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -530,7 +551,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="- removed verion number from composer.json&#10;- added debugbar as a require-dev" />
     <MESSAGE value="bumped verion number to v1.0.2" />
     <MESSAGE value="cleaned-up service provider" />
     <MESSAGE value="moved from vite to mix" />
@@ -555,7 +575,8 @@
     <MESSAGE value="Added logging capabilities for role creation/edition/deletion and user creation" />
     <MESSAGE value="Fix: add multiple permissions when editing a role" />
     <MESSAGE value="Fix: role delete writes ok to log" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix: role delete writes ok to log" />
+    <MESSAGE value="Added softdeletes to Role model" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added softdeletes to Role model" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

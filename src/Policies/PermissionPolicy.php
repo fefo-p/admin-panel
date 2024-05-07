@@ -20,7 +20,7 @@
          */
         public function administer( User $user )
         {
-            if ($user->getAllPermissions()->pluck('name')->contains('administrar permisos')) {
+            if ($user->getAllPermissions()->pluck('name')->contains('adminpanel.permiso.administrar')) {
                 return Response::allow('You can administer permissions.');
             }
         
@@ -36,7 +36,7 @@
          */
         public function viewAny( User $user )
         {
-            if ($user->getAllPermissions()->pluck('name')->contains('ver permisos')) {
+            if ($user->getAllPermissions()->pluck('name')->contains('adminpanel.permiso.ver')) {
                 return Response::allow('You can see the permission list.');
             }
             
@@ -53,7 +53,7 @@
          */
         public function view( User $user, Permission $permission )
         {
-            if ($user->getAllPermissions()->pluck('name')->contains('ver permisos')) {
+            if ($user->getAllPermissions()->pluck('name')->contains('adminpanel.permiso.ver')) {
                 return Response::allow('You can see this permission.');
             }
     
@@ -69,7 +69,7 @@
          */
         public function create( User $user )
         {
-            if ($user->getAllPermissions()->pluck('name')->contains('crear permisos')) {
+            if ($user->getAllPermissions()->pluck('name')->contains('adminpanel.permiso.crear')) {
                 return Response::allow('You can create a permission.');
             }
     
@@ -86,7 +86,7 @@
          */
         public function update( User $user, Permission $permission )
         {
-            if ($user->getAllPermissions()->pluck('name')->contains('editar permisos')) {
+            if ($user->getAllPermissions()->pluck('name')->contains('adminpanel.permiso.editar')) {
                 return Response::allow('You can edit this permission.');
             }
     
@@ -103,7 +103,7 @@
          */
         public function delete( User $user, Permission $permission )
         {
-            if ($user->getAllPermissions()->pluck('name')->contains('borrar permisos')) {
+            if ($user->getAllPermissions()->pluck('name')->contains('adminpanel.permiso.borrar')) {
                 return Response::allow('You can delete this permission.');
             }
     

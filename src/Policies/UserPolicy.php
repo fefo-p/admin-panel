@@ -19,7 +19,7 @@
          */
         public function administer( User $user )
         {
-            if ( $user->getAllPermissions()->pluck( 'name' )->contains( 'administrar usuarios' ) ) {
+            if ( $user->getAllPermissions()->pluck( 'name' )->contains( 'adminpanel.usuario.administrar' ) ) {
                 return Response::allow( 'You can administer users.' );
             }
             
@@ -35,7 +35,7 @@
          */
         public function viewAny( User $user )
         {
-            if ( $user->getAllPermissions()->pluck( 'name' )->contains( 'ver usuarios' ) ) {
+            if ( $user->getAllPermissions()->pluck( 'name' )->contains( 'adminpanel.usuario.ver' ) ) {
                 return Response::allow( 'You can see the user list.' );
             }
             
@@ -52,7 +52,7 @@
          */
         public function view( User $user, User $model )
         {
-            if ( $user->getAllPermissions()->pluck( 'name' )->contains( 'ver usuarios' ) ) {
+            if ( $user->getAllPermissions()->pluck( 'name' )->contains( 'adminpanel.usuario.ver' ) ) {
                 return Response::allow( 'You can see this user.' );
             }
             
@@ -68,7 +68,7 @@
          */
         public function create( User $user )
         {
-            if ( $user->getAllPermissions()->pluck( 'name' )->contains( 'crear usuarios' ) ) {
+            if ( $user->getAllPermissions()->pluck( 'name' )->contains( 'adminpanel.usuario.crear' ) ) {
                 return Response::allow( 'You can create a user.' );
             }
             
@@ -85,7 +85,7 @@
          */
         public function update( User $user, User $model )
         {
-            if ( $user->getAllPermissions()->pluck( 'name' )->contains( 'editar usuarios' ) ) {
+            if ( $user->getAllPermissions()->pluck( 'name' )->contains( 'adminpanel.usuario.editar' ) ) {
                 return Response::allow( 'You can edit this user.' );
             }
             
@@ -102,7 +102,7 @@
          */
         public function delete( User $user, User $model )
         {
-            if ( $user->getAllPermissions()->pluck( 'name' )->contains( 'borrar usuarios' ) ) {
+            if ( $user->getAllPermissions()->pluck( 'name' )->contains( 'adminpanel.usuario.borrar' ) ) {
                 return Response::allow( 'You can delete this user.' );
             }
             

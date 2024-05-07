@@ -9,7 +9,7 @@
             'Primer versión completamente funcional',
         ],
 
-        'users'               => [
+        'users' => [
             'external'           => env('ADMINPANEL_EXTERNAL_USERS', false),
             'is_external_column' => env('ADMINPANEL_EXTERNAL_COLUMN', 'externo'),
         ],
@@ -17,7 +17,14 @@
         /**
          * Admin Panel's Service Provider alias
          */
-        'alias'               => 'adminpanel',
+        'alias' => 'adminpanel',
+
+        /**
+         * Admin Panel's administrator role name
+         */
+        'admin' => [
+            'role_name' => env('ADMINPANEL_ADMIN_ROLE_NAME', 'administrador'),
+        ],
 
         /**
          * Admin Panel's Service Provider alias
@@ -30,7 +37,7 @@
         'database_connection' => env('ADMINPANEL_DATABASE_CONNECTION', 'mysql'),
         'table'               => env('ADMINPANEL_TABLE', 'auditoria_adminpanel'),
 
-        'log' => [
+        'log'                 => [
             'separator' => env('ADMINPANEL_LOG_SEPARATOR', '|'),
         ],
 

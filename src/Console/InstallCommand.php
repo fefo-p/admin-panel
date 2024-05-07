@@ -222,63 +222,63 @@ EOF;
             
             $permissions = [
                 [
-                    'name'       => 'administrar usuarios',
+                    'name'       => 'adminpanel.usuario.administrar',
                     'guard_name' => 'web',
                 ],
                 [
-                    'name'       => 'crear usuarios',
+                    'name'       => 'adminpanel.usuario.crear',
                     'guard_name' => 'web',
                 ],
                 [
-                    'name'       => 'ver usuarios',
+                    'name'       => 'adminpanel.usuario.ver',
                     'guard_name' => 'web',
                 ],
                 [
-                    'name'       => 'editar usuarios',
+                    'name'       => 'adminpanel.usuario.editar',
                     'guard_name' => 'web',
                 ],
                 [
-                    'name'       => 'borrar usuarios',
+                    'name'       => 'adminpanel.usuario.borrar',
                     'guard_name' => 'web',
                 ],
                 [
-                    'name'       => 'administrar roles',
+                    'name'       => 'adminpanel.rol.administrar',
                     'guard_name' => 'web',
                 ],
                 [
-                    'name'       => 'crear roles',
+                    'name'       => 'adminpanel.rol.crear',
                     'guard_name' => 'web',
                 ],
                 [
-                    'name'       => 'ver roles',
+                    'name'       => 'adminpanel.rol.ver',
                     'guard_name' => 'web',
                 ],
                 [
-                    'name'       => 'editar roles',
+                    'name'       => 'adminpanel.rol.editar',
                     'guard_name' => 'web',
                 ],
                 [
-                    'name'       => 'borrar roles',
+                    'name'       => 'adminpanel.rol.borrar',
                     'guard_name' => 'web',
                 ],
                 [
-                    'name'       => 'administrar permisos',
+                    'name'       => 'adminpanel.permisos.administrar',
                     'guard_name' => 'web',
                 ],
                 [
-                    'name'       => 'crear permisos',
+                    'name'       => 'adminpanel.permisos.crear',
                     'guard_name' => 'web',
                 ],
                 [
-                    'name'       => 'ver permisos',
+                    'name'       => 'adminpanel.permisos.ver',
                     'guard_name' => 'web',
                 ],
                 [
-                    'name'       => 'editar permisos',
+                    'name'       => 'adminpanel.permisos.editar',
                     'guard_name' => 'web',
                 ],
                 [
-                    'name'       => 'borrar permisos',
+                    'name'       => 'adminpanel.permisos.borrar',
                     'guard_name' => 'web',
                 ],
             ];

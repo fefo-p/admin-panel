@@ -15,7 +15,7 @@
 
         public function mount()
         {
-            Auth::user()->can('crear roles');
+            Auth::user()->can('adminpanel.rol.crear');
 
             $this->guard_name = config('adminpanel.guard');
             $this->separator = config( 'adminpanel.log.separator' );

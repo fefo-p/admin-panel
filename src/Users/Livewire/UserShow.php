@@ -12,7 +12,7 @@
 
         public function mount( int $user_id )
         {
-            auth()->user()->can('ver usuarios');
+            auth()->user()->can('adminpanel.usuario.ver');
     
             $this->user = User::withTrashed()->find( $user_id );
         }

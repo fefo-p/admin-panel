@@ -3,6 +3,7 @@
     namespace FefoP\AdminPanel\Actions;
 
     use Spatie\Permission\PermissionRegistrar;
+    use FefoP\AdminPanel\Actions\SincronizarPermisosDeAdministrador;
 
     class SincronizarPermisosDeRol
     {
@@ -24,6 +25,8 @@
             $a_agregar = $finales->diff($originales);
 
             $rol->syncPermissions($finales);
+
+            (new SincronizarPermisosDeAdministrador)();
             app()->make(PermissionRegistrar::class)->forgetCachedPermissions();
 
             if ( $a_borrar->isEmpty() ) {

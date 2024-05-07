@@ -1,11 +1,11 @@
 <?php
-    
+
     namespace FefoP\AdminPanel\Middlewares;
-    
+
     use Closure;
     use Illuminate\Http\Request;
     use Illuminate\Contracts\Auth\Factory as AuthFactory;
-    
+
     class IsAdmin
     {
         /**
@@ -14,7 +14,7 @@
          * @var \Illuminate\Contracts\Auth\Factory
          */
         protected $auth;
-        
+
         /**
          * Create a new middleware instance.
          *
@@ -22,29 +22,29 @@
          *
          * @return void
          */
-        public function __construct( AuthFactory $auth )
+        public function __construct(AuthFactory $auth)
         {
             $this->auth = $auth;
         }
-        
+
         /**
          * Handle an incoming request.
          *
-         * @param  \Illuminate\Http\Request  $request
+         * @param  \Illuminate\Http\Request                                                                           $request
          * @param  \Closure(\Illuminate\Http\Request): (\Illuminate\Http\Response|\Illuminate\Http\RedirectResponse)  $next
          *
          * @return \Illuminate\Http\Response|\Illuminate\Http\RedirectResponse
          */
-        public function handle( Request $request, Closure $next )
+        public function handle(Request $request, Closure $next)
         {
-            if ( ! $request->user()?->hasAnyPermission( [
-                                                            'administrar usuarios',
-                                                            'administrar roles',
-                                                            'administrar permisos',
-                                                        ] ) ) {
-                return redirect( 'dashboard' );
+            if ( !$request->user()?->hasAnyPermission([
+                                                          'adminpanel.usuario.administrar',
+                                                          'adminpanel.rol.administrar',
+                                                          'adminpanel.permiso.administrar',
+                                                      ]) ) {
+                return redirect('dashboard');
             }
-            
-            return $next( $request );
+
+            return $next($request);
         }
     }
