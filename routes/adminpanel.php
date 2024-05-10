@@ -4,7 +4,7 @@
     use FefoP\AdminPanel\Models\Role;
     use Illuminate\Support\Facades\Route;
     use FefoP\AdminPanel\Models\Permission;
-    use FefoP\AdminPanel\Middlewares\IsAdmin;
+    use FefoP\AdminPanel\Middlewares\IsAdminUserPermission;
 
     /**
     |--------------------------------------------------------------------------
@@ -17,7 +17,7 @@
     |
     */
 
-    Route::middleware([ 'web', IsAdmin::class, config('jetstream.auth_session', 'verified') ])->group(function () {
+    Route::middleware([ 'web', IsAdminUserPermission::class, config('jetstream.auth_session', 'verified') ])->group(function () {
         Route::prefix('adminpanel')->group(function () {
 
             Route::controller(AdminPanel::class)->group(function () {

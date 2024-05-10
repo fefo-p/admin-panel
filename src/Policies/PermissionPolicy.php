@@ -20,7 +20,7 @@
          */
         public function administer( User $user )
         {
-            if ($user->getAllPermissions()->pluck('name')->contains('adminpanel.permiso.administrar')) {
+            if ($user->getAllPermissions()->pluck('name')->contains('adminpanel.permiso.editar')) {
                 return Response::allow('You can administer permissions.');
             }
         
