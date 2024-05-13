@@ -7,9 +7,12 @@
     use LivewireUI\Modal\ModalComponent;
     use Illuminate\Support\Facades\Auth;
     use FefoP\AdminPanel\Models\Activity;
+    use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 
     class RoleDelete extends ModalComponent
     {
+        use AuthorizesRequests;
+
         public     $role;
         public int $role_id;
         public     $mensaje_error;

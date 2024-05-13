@@ -4,17 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="02cbde73-5ed5-45b2-822b-e453ce0f9246" name="Changes" comment="Sincronizar permisos de administrador">
+    <list default="true" id="02cbde73-5ed5-45b2-822b-e453ce0f9246" name="Changes" comment="Fix permissions to access view of users, roles &amp; permissions">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/adminpanel.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/adminpanel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AdminPanel.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AdminPanel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Policies/RolePolicy.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Policies/RolePolicy.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Policies/UserPolicy.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Policies/UserPolicy.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Roles/Livewire/RoleCreate.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Roles/Livewire/RoleCreate.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Roles/Livewire/RoleDelete.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Roles/Livewire/RoleDelete.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Users/Livewire/UserDelete.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Users/Livewire/UserDelete.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Users/Livewire/UserEdit.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Users/Livewire/UserEdit.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -227,7 +220,7 @@
       <workItem from="1715100555048" duration="2541000" />
       <workItem from="1715107746501" duration="5000" />
       <workItem from="1715346988425" duration="12904000" />
-      <workItem from="1715604263686" duration="2252000" />
+      <workItem from="1715604263686" duration="4928000" />
     </task>
     <task id="LOCAL-00001" summary="- added vendor to gitignore&#10;- deleted composer.lock">
       <created>1658619420967</created>
@@ -542,7 +535,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715365738696</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="Fix permissions to access view of users, roles &amp; permissions">
+      <option name="closed" value="true" />
+      <created>1715606703492</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1715606703492</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -572,7 +573,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fix: added assets to commit" />
     <MESSAGE value="Fixed (actually workaround ) pagination on laravel-tables" />
     <MESSAGE value="Fixed GitHub status icons" />
     <MESSAGE value="updated readme.md" />
@@ -597,7 +597,8 @@
     <MESSAGE value="Modificación nombres de permiso" />
     <MESSAGE value="Hilado fino de permisos" />
     <MESSAGE value="Sincronizar permisos de administrador" />
-    <option name="LAST_COMMIT_MESSAGE" value="Sincronizar permisos de administrador" />
+    <MESSAGE value="Fix permissions to access view of users, roles &amp; permissions" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix permissions to access view of users, roles &amp; permissions" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

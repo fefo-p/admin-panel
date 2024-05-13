@@ -7,9 +7,12 @@
     use LivewireUI\Modal\ModalComponent;
     use Illuminate\Support\Facades\Auth;
     use FefoP\AdminPanel\Models\Activity;
+    use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 
     class UserDelete extends ModalComponent
     {
+        use AuthorizesRequests;
+
         public        $user;
         public int    $user_id;
         public string $action;
