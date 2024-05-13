@@ -20,7 +20,8 @@
          */
         public function administer( User $user )
         {
-            if ( $user->getAllPermissions()->pluck( 'name' )->contains( 'adminpanel.rol.editar' ) ) {
+            //if ( $user->getAllPermissions()->pluck( 'name' )->contains( 'adminpanel.rol.editar' ) ) {
+            if ($user->can('adminpanel.rol.editar')) {
                 return Response::allow( 'You can administer roles.' );
             }
             
@@ -36,7 +37,8 @@
          */
         public function viewAny( User $user )
         {
-            if ( $user->getAllPermissions()->pluck( 'name' )->contains( 'adminpanel.rol.ver' ) ) {
+            //if ( $user->getAllPermissions()->pluck( 'name' )->contains( 'adminpanel.rol.ver' ) ) {
+            if ($user->can('adminpanel.rol.ver')) {
                 return Response::allow( 'You can see the role list.' );
             }
             
@@ -53,7 +55,8 @@
          */
         public function view( User $user, Role $role )
         {
-            if ( $user->getAllPermissions()->pluck( 'name' )->contains( 'adminpanel.rol.ver' ) ) {
+            //if ( $user->getAllPermissions()->pluck( 'name' )->contains( 'adminpanel.rol.ver' ) ) {
+            if ($user->can('adminpanel.rol.ver')) {
                 return Response::allow( 'You can see this role.' );
             }
             
@@ -69,7 +72,8 @@
          */
         public function create( User $user )
         {
-            if ( $user->getAllPermissions()->pluck( 'name' )->contains( 'adminpanel.rol.crear' ) ) {
+            //if ( $user->getAllPermissions()->pluck( 'name' )->contains( 'adminpanel.rol.crear' ) ) {
+            if ($user->can('adminpanel.rol.crear')) {
                 return Response::allow( 'You can create a role.' );
             }
             
@@ -86,7 +90,8 @@
          */
         public function update( User $user, Role $role )
         {
-            if ( $user->getAllPermissions()->pluck( 'name' )->contains( 'adminpanel.rol.editar' ) ) {
+            //if ( $user->getAllPermissions()->pluck( 'name' )->contains( 'adminpanel.rol.editar' ) ) {
+            if ($user->can('adminpanel.rol.editar')) {
                 return Response::allow( 'You can edit this role.' );
             }
             
@@ -103,7 +108,8 @@
          */
         public function delete( User $user, Role $role )
         {
-            if ( $user->getAllPermissions()->pluck( 'name' )->contains( 'adminpanel.rol.borrar' ) ) {
+            //if ( $user->getAllPermissions()->pluck( 'name' )->contains( 'adminpanel.rol.borrar' ) ) {
+            if ($user->can('adminpanel.rol.borrar')) {
                 return Response::allow( 'You can delete this role.' );
             }
             

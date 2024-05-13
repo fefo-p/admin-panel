@@ -9,6 +9,7 @@
     use Illuminate\Support\Facades\Auth;
     use FefoP\AdminPanel\Models\Permission;
     use Illuminate\Support\Facades\Artisan;
+    use Illuminate\Auth\Access\AuthorizationException;
 
     class AdminPanel extends Controller
     {
@@ -45,6 +46,8 @@
 
         public function users(Request $request)
         {
+            $this->authorize('viewAny', App\Models\User::class);
+
             $title       = 'Listado de Usuarios';
             $description = 'Listado de usuarios definidos en el sistema';
             $action      = [
@@ -68,6 +71,11 @@
 
         public function roles()
         {
+            $this->authorize('viewAny', FefoP\AdminPanel\Models\Role::class);
+            /*if (Auth::user()->cannot('adminpanel.rol.ver')) {
+                throw new AuthorizationException('No tienes permisos para acceder a este panel.');
+            }*/
+
             $title       = 'Listado de Roles';
             $description = 'Roles definidos en el sistema';
             $action      = [
@@ -86,6 +94,11 @@
 
         public function permissions()
         {
+            $this->authorize('viewAny', FefoP\AdminPanel\Models\Permission::class);
+            /*if (Auth::user()->cannot('adminpanel.permiso.ver')) {
+                throw new AuthorizationException('No tienes permisos para acceder a este panel.');
+            }*/
+
             $title       = 'Listado de Permisos';
             $description = 'Permisos definidos en el sistema';
             $action      = [

@@ -25,19 +25,18 @@ These are all required dependencies that will be installed if needed.
 
 To get started, add a local repository to Composer:
 
-```js
+```json
 {
-  [...]
     "repositories": {
         "admin-panel": {
             "type": "path",
             "url": "/path-to-downloaded-file/fefo-p/admin-panel",
             "options": {
-            "symlink": true
+                "symlink": true
+            }
         }
-    },
-    [...]
-  }
+    }
+}
 ```
 
 ### -production-

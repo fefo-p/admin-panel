@@ -17,9 +17,10 @@
 
         public function mount(int $user_id, string $action)
         {
-            Auth::user()->can('adminpanel.usuario.borrar');
-
             $this->user      = User::withTrashed()->find($user_id);
+            $this->authorize('delete', $this->user);
+            //Auth::user()->can('adminpanel.usuario.borrar');
+
             $this->action    = $action;
             $this->separator = config('adminpanel.log.separator');
         }

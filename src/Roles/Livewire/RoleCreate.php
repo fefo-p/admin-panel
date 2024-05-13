@@ -7,15 +7,20 @@
     use LivewireUI\Modal\ModalComponent;
     use Illuminate\Support\Facades\Auth;
     use FefoP\AdminPanel\Models\Activity;
+    use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
+
 
     class RoleCreate extends ModalComponent
     {
+        use AuthorizesRequests;
+
         public        $name;
         public string $guard_name;
 
         public function mount()
         {
-            Auth::user()->can('adminpanel.rol.crear');
+            $this->authorize('create', FefoP\AdminPanel\Models\Role::class);
+            //Auth::user()->can('adminpanel.rol.crear');
 
             $this->guard_name = config('adminpanel.guard');
             $this->separator = config( 'adminpanel.log.separator' );

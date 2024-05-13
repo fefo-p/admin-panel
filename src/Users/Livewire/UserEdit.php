@@ -28,11 +28,11 @@
 
         public function mount(int $user_id): void
         {
-            $this->authorize('administer', App\Models\User::class);
 
             $this->user  = User::withTrashed()
                                ->with([ "roles", "permissions" ])
                                ->find($user_id);
+            $this->authorize('update', $this->user);
             $this->name  = $this->user->name;
             $this->email = $this->user->email;
             $this->cuil  = $this->user->cuil;

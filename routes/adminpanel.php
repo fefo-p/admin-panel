@@ -24,10 +24,8 @@
                 Route::get('/', 'index')->name('adminpanel.dashboard');
                 Route::get('/about', 'about')->name('adminpanel.about');
                 Route::get('/users', 'users')->name('adminpanel.users');
-                Route::get('/roles', 'roles')->name('adminpanel.roles')
-                     ->can('administer', Role::class);
-                Route::get('/permissions', 'permissions')->name('adminpanel.permissions')
-                     ->can('administer', Permission::class);
+                Route::get('/roles', 'roles')->name('adminpanel.roles');
+                Route::get('/permissions', 'permissions')->name('adminpanel.permissions');
             });
 
         });

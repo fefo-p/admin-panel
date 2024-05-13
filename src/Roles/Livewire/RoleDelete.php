@@ -16,9 +16,10 @@
 
         public function mount(int $role_id, string $action)
         {
-            Auth::user()->can('adminpanel.rol.borrar');
+            $this->role = Role::find($role_id);
+            $this->authorize('delete', $this->role);
+            //Auth::user()->can('adminpanel.rol.borrar');
 
-            $this->role      = Role::find($role_id);
             $this->separator = config('adminpanel.log.separator');
         }
 
