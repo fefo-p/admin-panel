@@ -229,14 +229,10 @@ EOF;
 
             $roles = [
                 [ 'name' => 'administrador' ],
-                [ 'name' => '(adminpanel) administrar usuarios y permisos' ],
+                [ 'name' => '(adminpanel) administrar usuarios y roles' ],
             ];
 
             $permissions = [
-                [
-                    'name'       => 'adminpanel.usuario.administrar',
-                    'guard_name' => 'web',
-                ],
                 [
                     'name'       => 'adminpanel.usuario.crear',
                     'guard_name' => 'web',
@@ -251,10 +247,6 @@ EOF;
                 ],
                 [
                     'name'       => 'adminpanel.usuario.borrar',
-                    'guard_name' => 'web',
-                ],
-                [
-                    'name'       => 'adminpanel.rol.administrar',
                     'guard_name' => 'web',
                 ],
                 [
@@ -274,25 +266,33 @@ EOF;
                     'guard_name' => 'web',
                 ],
                 [
-                    'name'       => 'adminpanel.permiso.administrar',
-                    'guard_name' => 'web',
-                ],
-                [
-                    'name'       => 'adminpanel.permiso.crear',
-                    'guard_name' => 'web',
-                ],
-                [
                     'name'       => 'adminpanel.permiso.ver',
                     'guard_name' => 'web',
                 ],
-                [
-                    'name'       => 'adminpanel.permiso.editar',
-                    'guard_name' => 'web',
-                ],
-                [
-                    'name'       => 'adminpanel.permiso.borrar',
-                    'guard_name' => 'web',
-                ],
+                //[
+                //    'name'       => 'adminpanel.usuario.administrar',
+                //    'guard_name' => 'web',
+                //],
+                //[
+                //    'name'       => 'adminpanel.rol.administrar',
+                //    'guard_name' => 'web',
+                //],
+                //[
+                //    'name'       => 'adminpanel.permiso.administrar',
+                //    'guard_name' => 'web',
+                //],
+                //[
+                //    'name'       => 'adminpanel.permiso.crear',
+                //    'guard_name' => 'web',
+                //],
+                //[
+                //    'name'       => 'adminpanel.permiso.editar',
+                //    'guard_name' => 'web',
+                //],
+                //[
+                //    'name'       => 'adminpanel.permiso.borrar',
+                //    'guard_name' => 'web',
+                //],
             ];
 
             foreach ( $roles as $role ) {
@@ -302,15 +302,15 @@ EOF;
             }
 
             foreach ( $permissions as $permission ) {
-                if ( !Permission::where('name', $permission['name'])->first() ) {
+                if ( !Permission::where('name', $permission[ 'name' ])->first() ) {
                     Permission::create($permission);
                 }
             }
 
-            // Asignar permisos de manejo de usuarios a rol "(adminpanel) administrar usuarios y permisos"
+            // Asignar permisos de manejo de usuarios a rol "(adminpanel) administrar usuarios y roles"
             $role = Role::latest()->first();
             foreach ( $permissions as $permission ) {
-                if (! Str::of($permission["name"])->endsWith('.administrar')) {
+                if ( !Str::of($permission[ "name" ])->endsWith('.administrar') ) {
                     $role->givePermissionTo($permission[ 'name' ]);
                 }
             }
@@ -320,14 +320,14 @@ EOF;
             $role = Role::first();
 
             foreach ( Permission::all() as $permission ) {
-                if (! Str::of($permission["name"])->startsWith('adminpanel.')) {
-                    $role->givePermissionTo($permission['name']);
+                if ( !Str::of($permission[ "name" ])->startsWith('adminpanel.') ) {
+                    $role->givePermissionTo($permission[ 'name' ]);
                 }
             }
 
             foreach ( $permissions as $permission ) {
-                if (Str::of($permission["name"])->endsWith('.ver')) {
-                    $role->givePermissionTo($permission['name']);
+                if ( Str::of($permission[ "name" ])->endsWith('.ver') ) {
+                    $role->givePermissionTo($permission[ 'name' ]);
                 }
             }
 

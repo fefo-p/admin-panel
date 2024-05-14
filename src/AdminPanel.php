@@ -9,7 +9,6 @@
     use Illuminate\Support\Facades\Auth;
     use FefoP\AdminPanel\Models\Permission;
     use Illuminate\Support\Facades\Artisan;
-    use Illuminate\Auth\Access\AuthorizationException;
 
     class AdminPanel extends Controller
     {
