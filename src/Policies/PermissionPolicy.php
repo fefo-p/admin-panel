@@ -69,6 +69,8 @@
          */
         public function create( User $user )
         {
+            Response::deny('You cannot create a permission.');
+
             if ($user->getAllPermissions()->pluck('name')->contains('adminpanel.permiso.crear')) {
                 return Response::allow('You can create a permission.');
             }
@@ -86,6 +88,8 @@
          */
         public function update( User $user, Permission $permission )
         {
+            Response::deny('You cannot edit this permission.');
+
             if ($user->getAllPermissions()->pluck('name')->contains('adminpanel.permiso.editar')) {
                 return Response::allow('You can edit this permission.');
             }
@@ -103,6 +107,8 @@
          */
         public function delete( User $user, Permission $permission )
         {
+            Response::deny('You cannot delete this permission.');
+
             if ($user->getAllPermissions()->pluck('name')->contains('adminpanel.permiso.borrar')) {
                 return Response::allow('You can delete this permission.');
             }

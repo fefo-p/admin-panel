@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="02cbde73-5ed5-45b2-822b-e453ce0f9246" name="Changes" comment="Fix permissions to access view of users, roles &amp; permissions">
+    <list default="true" id="02cbde73-5ed5-45b2-822b-e453ce0f9246" name="Changes" comment="Fix: usar authorizes requests en User y Role delete">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Roles/Livewire/RoleDelete.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Roles/Livewire/RoleDelete.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Users/Livewire/UserDelete.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Users/Livewire/UserDelete.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire-tables/cells/permission-actions.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire-tables/cells/permission-actions.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/nav-menu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/nav-menu.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AdminPanel.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AdminPanel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Policies/PermissionPolicy.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Policies/PermissionPolicy.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -220,7 +222,8 @@
       <workItem from="1715100555048" duration="2541000" />
       <workItem from="1715107746501" duration="5000" />
       <workItem from="1715346988425" duration="12904000" />
-      <workItem from="1715604263686" duration="4928000" />
+      <workItem from="1715604263686" duration="6208000" />
+      <workItem from="1715684647406" duration="4134000" />
     </task>
     <task id="LOCAL-00001" summary="- added vendor to gitignore&#10;- deleted composer.lock">
       <created>1658619420967</created>
@@ -543,7 +546,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715606703492</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="Fix: usar authorizes requests en User y Role delete">
+      <option name="closed" value="true" />
+      <created>1715624300103</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1715624300103</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -573,7 +584,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Fixed (actually workaround ) pagination on laravel-tables" />
     <MESSAGE value="Fixed GitHub status icons" />
     <MESSAGE value="updated readme.md" />
     <MESSAGE value="Fix: tables" />
@@ -598,7 +608,8 @@
     <MESSAGE value="Hilado fino de permisos" />
     <MESSAGE value="Sincronizar permisos de administrador" />
     <MESSAGE value="Fix permissions to access view of users, roles &amp; permissions" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix permissions to access view of users, roles &amp; permissions" />
+    <MESSAGE value="Fix: usar authorizes requests en User y Role delete" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix: usar authorizes requests en User y Role delete" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

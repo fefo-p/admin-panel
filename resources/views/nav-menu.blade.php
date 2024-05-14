@@ -66,17 +66,17 @@
                         Roles
                     </a>
 
-                    {{--<a href="{{ route('adminpanel.permissions') }}#"
+                    <a href="{{ route('adminpanel.permissions') }}#"
                        class="text-gray-300 hover:bg-gray-700 hover:text-white group flex items-center px-2 py-2 text-base font-medium rounded-md @if(request()->routeIs('adminpanel.permissions')) bg-gray-900 text-white @else text-gray-300 hover:bg-gray-700 hover:text-white @endif">
                         <svg class="text-gray-300 mr-4 flex-shrink-0 h-6 w-6 @if(request()->routeIs('adminpanel.permissions')) text-gray-300 @else text-gray-400 group-hover:text-gray-300 @endif"
                              x-description="Heroicon name: outline/inbox" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
                              stroke="currentColor" aria-hidden="true">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5"></path>
-                            --}}{{--<path stroke-linecap="round" stroke-linejoin="round"
-                                  d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4"></path>--}}{{--
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                  d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4"></path>
                         </svg>
-                        Permissions
-                    </a>--}}
+                        Permisos
+                    </a>
 
                     <div class="py-1">
                         <x-ap-separador />
@@ -160,17 +160,17 @@
                     Roles
                 </a>
 
-                {{--<a href="{{ route('adminpanel.permissions') }}"
+                <a href="{{ route('adminpanel.permissions') }}"
                    class="text-gray-300 hover:bg-gray-700 hover:text-white group flex items-center px-2 py-2 text-sm font-medium rounded-md @if(request()->routeIs('adminpanel.permissions')) bg-gray-900 text-white @else text-gray-300 hover:bg-gray-700 hover:text-white @endif">
                     <svg class="text-gray-400 group-hover:text-gray-300 mr-3 flex-shrink-0 h-6 w-6 @if(request()->routeIs('adminpanel.permissions')) text-gray-300 @else text-gray-400 group-hover:text-gray-300 @endif"
                          x-description="Heroicon name: outline/inbox" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
                          stroke="currentColor" aria-hidden="true">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5"></path>
-                        --}}{{--<path stroke-linecap="round" stroke-linejoin="round"
-                              d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4"></path>--}}{{--
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                              d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4"></path>
                     </svg>
-                    Permissions
-                </a>--}}
+                    Permisos
+                </a>
 
                 <div class="py-1">
                     <x-ap-separador />

@@ -95,24 +95,20 @@
         public function permissions()
         {
             $this->authorize('viewAny', FefoP\AdminPanel\Models\Permission::class);
-            /*if (Auth::user()->cannot('adminpanel.permiso.ver')) {
-                throw new AuthorizationException('No tienes permisos para acceder a este panel.');
-            }*/
 
             $title       = 'Listado de Permisos';
             $description = 'Permisos definidos en el sistema';
-            $action      = [
-                'name'      => 'Crear permiso',
-                'component' => 'adminpanel::permission-create',
-            ];
+            $action      = null; //[
+            //    'name'      => 'Crear permiso',
+            //    'component' => 'adminpanel::permission-create',
+            //];
             $permissions = Permission::paginate(10);
 
             return view('adminpanel::permissions.index', [
                 'permissions' => $permissions,
                 'title'       => $title ?? null,
                 'description' => $description ?? null,
-                'action'      => Auth::user()?->can('adminpanel.permiso.crear',
-                                                    'FefoP\AdminPanel\Models\Permission') ? $action : null,
+                'action'      => null, //Auth::user()?->can('adminpanel.permiso.crear', 'FefoP\AdminPanel\Models\Permission') ? $action : null,
             ]);
         }
 
